@@ -31,4 +31,7 @@ parts:
     - title: Recommended tutorial on Git
       url: https://www.youtube.com/watch?v=HkdAHXoRtos
   - file: docs/week_5
+    sections:
+    - title: Managing releases in a Github repository
+      url: https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
   - file: docs/week_6
