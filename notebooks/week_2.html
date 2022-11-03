@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python Introduction II - Data Types 2 and Numpy &#8212; BIO-210</title>
+    <title>BIO-210: Projects in Informatics for SV &#8212; BIO-210</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -119,6 +119,11 @@ const thebe_selector_output = ".output, .cell_output"
    Run Jupyter Notebooks with EPFL’s Noto
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/release_notes.html">
+   Releases for projects
+  </a>
+ </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
@@ -155,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     week 2 - notebook
+     BIO-210: Projects in Informatics for SV
     </a>
    </li>
    <li class="toctree-l2">
@@ -219,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
    6. Functionify
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/week_7.html">
+   7. Visualization and documentation
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -274,7 +284,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/EPFL-BIO-210/BIO-210-CourseMaterials/main?urlpath=tree/docs/notebooks/week_2_update.ipynb"
+        <a href="https://mybinder.org/v2/gh/EPFL-BIO-210/BIO-210-CourseMaterials/main?urlpath=tree/docs/notebooks/week_2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -334,7 +344,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fnotebooks/week_2_update.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fnotebooks/week_2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -362,7 +372,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/notebooks/week_2_update.ipynb"
+        <a href="../_sources/notebooks/week_2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -421,52 +431,64 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-types-containers-ii">
-   Data types - Containers II
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   BIO-210: Projects in Informatics for SV
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tuples">
-     Tuples
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sets">
-     Sets
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numpy">
-   Numpy
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-introduction-ii-data-types-2-and-numpy">
+   Python Introduction II - Data Types 2 and Numpy
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy-arrays">
-     Numpy arrays
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-types-containers-ii">
+     Data types - Containers II
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tuples">
+       Tuples
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sets">
+       Sets
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-and-functions">
-     Operations and functions
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy">
+     Numpy
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-the-array-s-elements">
-     Accessing the array’s elements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#array-manipulation">
-     Array manipulation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#broadcasting">
-     Broadcasting
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numpy-arrays">
+       Numpy arrays
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operations-and-functions">
+       Operations and functions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accessing-the-array-s-elements">
+       Accessing the array’s elements
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#array-manipulation">
+       Array manipulation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#broadcasting">
+       Broadcasting
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -479,7 +501,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Python Introduction II - Data Types 2 and Numpy</h1>
+                <h1>BIO-210: Projects in Informatics for SV</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -489,52 +511,64 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-types-containers-ii">
-   Data types - Containers II
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   BIO-210: Projects in Informatics for SV
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tuples">
-     Tuples
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sets">
-     Sets
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numpy">
-   Numpy
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-introduction-ii-data-types-2-and-numpy">
+   Python Introduction II - Data Types 2 and Numpy
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy-arrays">
-     Numpy arrays
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-types-containers-ii">
+     Data types - Containers II
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tuples">
+       Tuples
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sets">
+       Sets
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operations-and-functions">
-     Operations and functions
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy">
+     Numpy
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-the-array-s-elements">
-     Accessing the array’s elements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#array-manipulation">
-     Array manipulation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#broadcasting">
-     Broadcasting
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numpy-arrays">
+       Numpy arrays
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operations-and-functions">
+       Operations and functions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accessing-the-array-s-elements">
+       Accessing the array’s elements
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#array-manipulation">
+       Array manipulation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#broadcasting">
+       Broadcasting
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -548,7 +582,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>BIO-210: Projects in Informatics for SV</p>
+  <section id="bio-210-projects-in-informatics-for-sv">
+<h1>BIO-210: Projects in Informatics for SV<a class="headerlink" href="#bio-210-projects-in-informatics-for-sv" title="Permalink to this headline">#</a></h1>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="python-introduction-ii-data-types-2-and-numpy">
 <h1>Python Introduction II - Data Types 2 and Numpy<a class="headerlink" href="#python-introduction-ii-data-types-2-and-numpy" title="Permalink to this headline">#</a></h1>
 <section id="data-types-containers-ii">
