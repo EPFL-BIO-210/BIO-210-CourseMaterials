@@ -1,4 +1,4 @@
-# Releases for projects
+# Details on weekly releases
 
 Releases for your projects were discussed Lecture 5. Here we give detailed information in one location.
 
@@ -10,7 +10,7 @@ Making releases is common practice for packages: e.g. [numpy v1.21.3](https://gi
 
 ## Release schedule
 
-Every release apart from v8 should be released at 10am on Mondays according to the following schedule:
+Every release apart from v8 should be released at *10am on Mondays* (before the lecture) according to the following schedule:
 
 |	          	|	Date	    |	Topic	| Software version | Software releases |  Grading / Feedback |
 | :---        |    :---  |    :--- | :--- | :--- | :--- |
@@ -32,12 +32,15 @@ Every release apart from v8 should be released at 10am on Mondays according to t
 
 ## Project release rules
 
-During project development, students are expected to regularly release new versions of their code according to the [class schedule listed above](##release-schedule). Selected releases will be subject to code review and grading as part of the course assessment as indicated in the table.
+During project development, students are expected to regularly release new versions of their code according to the [class schedule listed above](#release-schedule). Selected releases will be subject to code review and grading as part of the course assessment as indicated in the table.
 
-Use versioning for making your release. You can find more information about versioning [here](https://py-pkgs.org/07-releasing-versioning.html). The only relevant rules for the class are:
+Use versioning for making your release. The only relevant rules for the class are:
 
 - make major releases per week, e.g. `v1.0`
 - if you find a bug/error after the release date, do not delete your release, but release a minor/patch release, e.g. `v1.1` with a description: `fixing xyz bug`. That way we know that you didn't miss the original deadline and later improved your code. We will always grade/review the latest available release.
+
+However, if you're interested you can find more information about versioning in Python [here](https://py-pkgs.org/07-releasing-versioning.html).
+
 
 ## How to create and manage a release?
 
@@ -49,4 +52,8 @@ With `git` one can easily [checkout specific tags](https://stackoverflow.com/que
 - list the tags (```git tag -l```)
 - `git checkout tags/<tag_name>`
 
-We also provide an example project for you to compare: [demo](https://github.com/EPFL-BIO-210/demo-project). Please send us pull-requests if you want to suggest changes. Check out the releases of this project [here](https://github.com/EPFL-BIO-210/demo-project/releases)!
+## How should your project look?
+
+We provide an example project for you to compare. Please check it out at [EPFL-BIO-210/demo-project](https://github.com/EPFL-BIO-210/demo-project).
+
+Feel free to send us pull-requests if you want to suggest changes. You can check out the releases of this project [here](https://github.com/EPFL-BIO-210/demo-project/releases)!
