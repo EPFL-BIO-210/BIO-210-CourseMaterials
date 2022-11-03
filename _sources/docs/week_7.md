@@ -1,6 +1,6 @@
 # Visualization and documentation
 
-This week, we will refactor our projects by adding documentation and visualization. As a reminder, you should release your code every week as detailed in the [release section](docs/release_notes).
+This week, we will refactor our projects by adding documentation and visualization. As a reminder, you should release your code every week as detailed in the [release section](../docs/release_notes.md).
 
 Please refer to the lecture notes for details on docstrings and visualization with matplotlib.
 
