@@ -465,7 +465,13 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#break-and-continue">
-     Break and continue
+     <em>
+      break
+     </em>
+     and
+     <em>
+      continue
+     </em>
     </a>
    </li>
   </ul>
@@ -533,7 +539,13 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#break-and-continue">
-     Break and continue
+     <em>
+      break
+     </em>
+     and
+     <em>
+      continue
+     </em>
     </a>
    </li>
   </ul>
@@ -600,8 +612,7 @@ title="Print to PDF"
 <p><strong>Exercise 0.</strong> Slice the matrix “a” and print all even numbers between 40 (excluded) and 70.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>  <span class="c1">#[all rows, all columns]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
 </pre></div>
 </div>
 </div>
@@ -610,7 +621,7 @@ title="Print to PDF"
 <section id="basic-statistical-functions">
 <h3>Basic statistical functions<a class="headerlink" href="#basic-statistical-functions" title="Permalink to this headline">#</a></h3>
 <p>NumPy contains various statistical functions that are used for data analysis. These functions are useful, for example, to find the maximum or the minimum element of a vector. It is also used to compute common statistical operations like standard deviation, variance, etc.</p>
-<p>The functions <code>mean</code> and <code>std</code> are used to caculate the mean and standard deviation of the input data (e.g., of an array). Besides caculating the result for the whole data, they can also be used to caculate it along one of axis.</p>
+<p>The functions <code>mean</code> and <code>std</code> are used to calculate the mean and standard deviation of the input data (e.g., of an array). Besides calculating the result for the whole data, they can also be used to calculate it along one of axis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
@@ -649,7 +660,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p><strong>Exercise 2.</strong> Besides <code>mean</code> and <code>std</code>, <strong>Numpy</strong> also offers the functions <code>min</code>, <code>max</code>, <code>median</code>, <code>argmin</code>, <code>argmax</code> to caculate the minimum, maximum and median values, index of the minimum and index of the maximum of the array. Apply these functions to the matrix <code>a</code> and along its axis 0 (think of it as coordinates of your array, with axis 0 along rows and axis 1 along columns). Take a better look at the example above to help you understand the importance of this parameter! If you still feel confused check out <a class="reference external" href="https://www.sharpsightlabs.com/blog/numpy-axes-explained/#numpy-axes-quick-explanation">this article</a>.</p>
+<p><strong>Exercise 2.</strong> Besides <code>mean</code> and <code>std</code>, <strong>Numpy</strong> also offers the functions <code>min</code>, <code>max</code>, <code>median</code>, <code>argmin</code>, <code>argmax</code> to calculate the minimum, maximum and median values, index of the minimum and index of the maximum of the array. Apply these functions to the matrix <code>a</code> and along its axis 0 (think of it as coordinates of your array, with axis 0 along rows and axis 1 along columns). Take a better look at the example above to help you understand the importance of this parameter! If you still feel confused check out <a class="reference external" href="https://www.sharpsightlabs.com/blog/numpy-axes-explained/#numpy-axes-quick-explanation">this article</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
@@ -804,7 +815,7 @@ Now, let’s define an athlete with [weight, height] = [111.0, 188.0], and a lis
 </div>
 </section>
 <section id="break-and-continue">
-<h3>Break and continue<a class="headerlink" href="#break-and-continue" title="Permalink to this headline">#</a></h3>
+<h3><em>break</em> and <em>continue</em><a class="headerlink" href="#break-and-continue" title="Permalink to this headline">#</a></h3>
 <p>The <strong>break</strong> statement in Python terminates the current loop and resumes execution at the next statement, just like the traditional <em>break</em> found in C. On the other hand, the <strong>continue</strong> statement skips all the remaining code in the current iteration of the loop and moves the control back to the top of the loop.</p>
 <p><strong>Exercise 10.</strong> Try to use for loop and continue to remove all the “h”s in the string “hello, haha, python”.</p>
 <div class="cell docutils container">
