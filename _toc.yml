@@ -17,7 +17,7 @@ parts:
   - file: docs/week_2
     sections:
     - title: week 2 - notebook
-      file: notebooks/week_2.ipynb
+      file: notebooks/week_2_update.ipynb
     - title: week 2 - notebook with solutions
       file: notebooks/week_2_solutions.ipynb
   - file: docs/week_3
@@ -36,3 +36,4 @@ parts:
   - file: docs/week_7
   - file: docs/week_8
   - file: docs/week_9
+  - file: docs/week_10
