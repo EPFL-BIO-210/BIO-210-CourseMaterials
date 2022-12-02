@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
    10. Profiling
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/week_11.html">
+   11. Object oriented programming
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -584,14 +589,14 @@ title="Print to PDF"
 <p>Tuples, like lists, are an ordered collection of values. The main difference between lists and tuples is that, while the former are mutable objects, <strong>tuples are immutable</strong>. This means that it is not possible to change the value of one of the elements of a tuple, unless it is a mutable object itself. To make things clear, a tuple of integers cannot be modified. However, a tuple of lists still allows the contained lists to be modified (in this case the tuple just stores a reference to the actual list, which is still mutable). In short, tuples are useful containers when the content of the collection is not expected to change or the number of objects to increase/decrease. Removing or adding an element to a tuple, differently from what happens with lists, is an expensive operation, as it creates an entirely new tuple. Tuples can be created by direct definition or from an iterable object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = (1, 3, 5, 6) , type of x: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = (1, 3, 5, 6)
+print(&quot;x = (1, 3, 5, 6) , type of x: &quot;, type(x))
 
-<span class="n">x_2</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The element of the list in position 2 is&quot;</span><span class="p">,</span> <span class="n">x_2</span><span class="p">)</span>
+x_2 = x[2]
+print(&quot;The element of the list in position 2 is&quot;, x_2)
 
-<span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tuple including the 10 digits: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+x = tuple(range(10))
+print(&quot;Tuple including the 10 digits: &quot;, x)
 </pre></div>
 </div>
 </div>
@@ -606,9 +611,9 @@ Tuple including the 10 digits:  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 <p>Tuples can be conveniently looped through with a for statement. Unlike lists, tuples do not offer any “tuple comprehension” syntax. The keyword <code>tuple</code> is necessary to define a tuple from a generator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="n">x_squared</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">el</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_squared</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = (1, 3, 5, 6)
+x_squared = tuple(el ** 2 for el in x)
+print(x_squared)
 </pre></div>
 </div>
 </div>
@@ -624,12 +629,12 @@ Tuple including the 10 digits:  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 <p>Sets, similarly to their mathematical counterpart, are unordered collections of unique objects. Like lists, as set can be created by directly defining its elements of by passing an iterable object to the function set().</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = {1, 3, 5, 6, 3} , type of x: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resulting set: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; NB: all elements are unique!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = {1, 3, 5, 6, 3}
+print(&quot;x = {1, 3, 5, 6, 3} , type of x: &quot;, type(x))
+print(&quot;Resulting set: &quot;, x, &quot; NB: all elements are unique!&quot;)
 
-<span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Set including the 10 digits: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+x = set(range(10))
+print(&quot;Set including the 10 digits: &quot;, x)
 </pre></div>
 </div>
 </div>
@@ -644,17 +649,17 @@ Set including the 10 digits:  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 <p>Sets have many useful operations, such as <strong>add</strong>, to add a single element, or <strong>update</strong>, to add all the elements in an iterable. With the methods <strong>remove</strong> and <strong>discard</strong> you can remove a single element of a set. <code>remove</code> will raise an error if the element is not in the set, while <code>discard</code> will not.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial set: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = {1, 2, 3}
+print(&quot;Initial set: &quot;, x)
 
-<span class="n">x</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After adding 6: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+x.add(6)
+print(&quot;After adding 6: &quot;, x)
 
-<span class="n">x</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After adding the numbers between 5 and 7: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+x.update(range(5, 8))
+print(&quot;After adding the numbers between 5 and 7: &quot;, x)
 
-<span class="n">x</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After removing 3: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+x.remove(3)
+print(&quot;After removing 3: &quot;, x)
 </pre></div>
 </div>
 </div>
@@ -670,12 +675,12 @@ After removing 3:  {1, 2, 5, 6, 7}
 <p>As no ordering is defined, it is not possible to access a specific element of a set by index. You can instead iterate through the elements of a set with a <strong>for loop</strong> or with the <strong>set comprehension</strong> syntax. Note that the definition ordering is not preserved when printing!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = {1, 3, 5, 6}
 
-<span class="n">x_squared</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="n">x_squared</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">el</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_squared</span><span class="p">)</span>
+x_squared = set()
+for el in x:
+    x_squared.add(el**2)
+print(x_squared)
 </pre></div>
 </div>
 </div>
@@ -687,9 +692,9 @@ After removing 3:  {1, 2, 5, 6, 7}
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
-<span class="n">x_squared</span> <span class="o">=</span> <span class="p">{</span><span class="n">el</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_squared</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = {1, 3, 5, 6}
+x_squared = {el ** 2 for el in x}
+print(x_squared)
 </pre></div>
 </div>
 </div>
@@ -702,14 +707,14 @@ After removing 3:  {1, 2, 5, 6, 7}
 <p>Sets are especially useful because of their support to the operations <code>difference</code>, <code>intersection</code> and <code>union</code>. Their behavior is the same as the corresponding mathematical operations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = {2, 5, -1}
+b = {4, 5, 9}
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A = &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B = &quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A minus B: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A intersection B: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A union B: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+print(&quot;A = &quot;, a)
+print(&quot;B = &quot;, b)
+print(&quot;A minus B: &quot;, a.difference(b))
+print(&quot;A intersection B: &quot;, a.intersection(b))
+print(&quot;A union B: &quot;, a.union(b))
 </pre></div>
 </div>
 </div>
@@ -730,7 +735,7 @@ A union B:  {2, 4, 5, 9, -1}
 <p><strong>Numpy</strong> is a widely used Python library for scientific computing. Its long list of functionalities and great performance have made it a fundamental tool for virtually any scientist using python. It is commonly imported with the nickname <strong>np</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
 </pre></div>
 </div>
 </div>
@@ -740,10 +745,10 @@ A union B:  {2, 4, 5, 9, -1}
 <p>The basic data type of numpy is the multidimensional array. The main way to create one is starting from a (nested) collection (e.g. a list). The array will have as many dimensions as the depth of the list (a list of lists has depth 2, a list of lists of lists 3, etc.).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;, shape of a: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b =</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;, shape of b: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.array([3, 4, 1])
+b = np.array([[1, 2], [4, -1], [3, 3]])
+print(&quot;a =&quot;, a, &quot;, shape of a: &quot;, a.shape)
+print(&quot;b =\n&quot;, b, &quot;, shape of b: &quot;, b.shape)
 </pre></div>
 </div>
 </div>
@@ -760,17 +765,17 @@ b =
 <p>In the previous examples numpy can automatically infer the dimensions of the input data and organize them accordingly (single and bi dimensional arrays). Other common ways of initializing arrays are with constant or random values. Numpy offers the handy functions <code>zeros</code>, <code>ones</code> and the module <code>random</code>. For example, <code>random.randn</code> samples the elements of the matrix from a standard normal distribution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ones((3, 4)) =&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.ones((3, 4))
+print(&quot;ones((3, 4)) =&quot;)
+print(a)
 
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">zeros((2, 5)) =&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+b = np.zeros((2, 5))
+print(&quot;\nzeros((2, 5)) =&quot;)
+print(b)
 
-<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">random.randn(3, 3) =&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+c = np.random.randn(3, 3)
+print(&quot;\nrandom.randn(3, 3) =&quot;)
+print(c)
 </pre></div>
 </div>
 </div>
@@ -795,11 +800,11 @@ random.randn(3, 3) =
 <p>Other useful array creation functions include <code>arange</code> and <code>linspace</code>. The first one behaves as <code>range</code>, but returning an array. The second genertes an array of a given number of equally spaced values between a minimum and a maximum.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;arange(3, 10) =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.arange(3, 10)
+print(&quot;arange(3, 10) =&quot;, a)
 
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;linspace(3, 4, 11) =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+b = np.linspace(3, 4, 11)
+print(&quot;linspace(3, 4, 11) =&quot;, b)
 </pre></div>
 </div>
 </div>
@@ -816,18 +821,18 @@ linspace(3, 4, 11) = [3.  3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4. ]
 <p>Multidimensional arrays obviously support all the basic mathematical operations. The default operators perform element-wise additions, subtractions, multiplications and divisions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-<span class="n">q</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.array([1, 3, -2])
+b = np.array([4, -1, 2])
+s = a + b
+d = a - b
+p = a * b
+q = a / b
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a + b = &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a - b = &quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a * b = &quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a / b = &quot;</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+print(&quot;a =&quot;, a, &quot;\tb =&quot;, b)
+print(&quot;a + b = &quot;, s)
+print(&quot;a - b = &quot;, d)
+print(&quot;a * b = &quot;, p)
+print(&quot;a / b = &quot;, q)
 </pre></div>
 </div>
 </div>
@@ -845,9 +850,9 @@ a / b =  [ 0.25 -3.   -1.  ]
 <p><strong>Exercise 1.</strong> Print the sine of 100 equally spaced values in the interval [-5, 5]</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_vals</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+x_vals = np.linspace(-5, 5, 100)
+print(np.sin(x_vals))
 </pre></div>
 </div>
 </div>
@@ -876,9 +881,9 @@ a / b =  [ 0.25 -3.   -1.  ]
 <p><strong>Exercise 2.</strong> Compute the square root of the first 10 integers using Numpy functions</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x_vals</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+x_vals = np.arange(10)
+print(np.sqrt(x_vals))
 </pre></div>
 </div>
 </div>
@@ -893,11 +898,11 @@ a / b =  [ 0.25 -3.   -1.  ]
 <p><strong>Exercise 3.</strong> Define two random matrices of size (3x4) and (4x2) and compute the product matrix. Is the resulting shape what you expected?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">m_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">m_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">prod_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m_1</span><span class="p">,</span> <span class="n">m_2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The shape, as expected, is </span><span class="si">{</span><span class="n">prod_m</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+m_1 = np.random.randn(3, 4)
+m_2 = np.random.randn(4, 2)
+prod_m = np.dot(m_1, m_2)
+print(f&quot;The shape, as expected, is {prod_m.shape}&quot;)
 </pre></div>
 </div>
 </div>
@@ -913,10 +918,10 @@ a / b =  [ 0.25 -3.   -1.  ]
 <p>Numpy arrays are suitable for the storage of large amount of data. It is therefore convenient to know some smart way to access their elements. As vectors are an ordered structure, elements can be accessed by their index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
-<span class="n">el</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The element in position (1, 0) is &quot;</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.array([[1, 2], [4, -1], [3, 3]])
+el = a[1, 0]
+print(a)
+print(&quot;\nThe element in position (1, 0) is &quot;, el)
 </pre></div>
 </div>
 </div>
@@ -934,10 +939,10 @@ The element in position (1, 0) is  4
 <p><strong>Exercise 4.</strong> Define a random array (values from the normal distribution) of shape (3, 4, 4). Slice the 2x2x2 cube at the beginning of each axis and print it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">cube</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+arr = np.random.randn(3, 4, 4)
+cube = arr[:2, :2, :2]
+print(cube)
 </pre></div>
 </div>
 </div>
@@ -954,10 +959,10 @@ The element in position (1, 0) is  4
 <p><strong>Exercise 5.</strong> Define a matrix of size (8x8). Undersample it into a (4x4) matrix by selecting every second element both along the rows and the columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-<span class="n">m_undersampled</span> <span class="o">=</span> <span class="n">m</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m_undersampled</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+m = np.random.randn(8, 8)
+m_undersampled = m[::2, ::2]
+print(m_undersampled.shape)
 </pre></div>
 </div>
 </div>
@@ -970,11 +975,11 @@ The element in position (1, 0) is  4
 <p><strong>Exercise 6.</strong> The slicing operation returns a reference to the sliced part of the array. This means that changing the value of the slice also changes the value of the original array. Define a (5x5) random matrix, slice the third row and assign the value 1 to its first 3 elements. Print the original matrix.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">row</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">row</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+m = np.random.randn(5, 5)
+row = m[2, :]
+row[:3] = 1
+print(m)
 </pre></div>
 </div>
 </div>
@@ -995,9 +1000,9 @@ The element in position (1, 0) is  4
 <p><code>reshape</code> is used to rearrange the shape of a vector without changing the values of its elements. It receives the list of sizes of the resulting array in each dimension and reorders the elements accordingly. It is possible to leave one of the dimensions blank (by passing a -1), as it can be inferred by the sizes of the other dimensions and the number of elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">x_square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The new shape is &quot;</span><span class="p">,</span> <span class="n">x_square</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = np.random.randn(100)
+x_square = np.reshape(x, [10, 10])
+print(&quot;The new shape is &quot;, x_square.shape)
 </pre></div>
 </div>
 </div>
@@ -1010,10 +1015,10 @@ The element in position (1, 0) is  4
 <p><strong>Exercise 7.</strong> Define a random matrix of size (100x100) and reshape it into an array of size (100x10x10). Try not specifying the last dimension and verify that it still has the expected shape</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">m_reshaped</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m_reshaped</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+m = np.random.randn(100, 100)
+m_reshaped = np.reshape(m, (100, 10, -1))
+print(m_reshaped.shape)
 </pre></div>
 </div>
 </div>
@@ -1027,14 +1032,14 @@ The element in position (1, 0) is  4
 <p><strong>Exercise 8.</strong> Create a random (3x5) matrix m and compute its transposed m_t. Verify that both the products between m_t and m and m and m_t result in a symmetric matrix</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">m_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-<span class="n">m_t_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m_t</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
-<span class="n">m_m_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">m_t</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+m = np.random.randn(3, 5)
+m_t = np.transpose(m)
+m_t_m = np.dot(m_t, m)
+m_m_t = np.dot(m, m_t)
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mt * M is symmetric: &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">m_t_m</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">m_t_m</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M * Mt is symmetric: &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">m_m_t</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">m_m_t</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+print(&quot;Mt * M is symmetric: &quot;, (m_t_m == np.transpose(m_t_m)).all())
+print(&quot;M * Mt is symmetric: &quot;, (m_m_t == np.transpose(m_m_t)).all())
 </pre></div>
 </div>
 </div>
@@ -1049,15 +1054,15 @@ M * Mt is symmetric:  True
 <p><strong>Exercise 9.</strong> Define two random matrices of sizes (2x5). Use the function <code>concatenate</code> to merge them into a new  matrix. First try passing axis = 0, then axis = 1. How does the shape of the result change?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">m_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">m_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+m_1 = np.random.randn(2, 5)
+m_2 = np.random.randn(2, 5)
 
-<span class="n">axis_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">m_1</span><span class="p">,</span> <span class="n">m_2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">axis_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">m_1</span><span class="p">,</span> <span class="n">m_2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+axis_0 = np.concatenate((m_1, m_2), axis=0)
+axis_1 = np.concatenate((m_1, m_2), axis=1)
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shape after concatenating along 0: &quot;</span><span class="p">,</span> <span class="n">axis_0</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shape after concatenating along 1: &quot;</span><span class="p">,</span> <span class="n">axis_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+print(&quot;Shape after concatenating along 0: &quot;, axis_0.shape)
+print(&quot;Shape after concatenating along 1: &quot;, axis_1.shape)
 </pre></div>
 </div>
 </div>
@@ -1074,10 +1079,10 @@ Shape after concatenating along 1:  (2, 10)
 <p>Broadcasting is a useful tool to write compact and efficient code with Numpy. The idea is that Numpy will sometimes accept vectors and matrices of different shapes when executing operations such as a sum or an element-wise product. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = np.array([[2, 4], [3, 1], [0, -1]])
+y = np.ones((3, 1))
+result = x + y
+print(result)
 </pre></div>
 </div>
 </div>
@@ -1096,11 +1101,11 @@ Shape after concatenating along 1:  (2, 10)
 <p><strong>Exercise 10.</strong> Create a (10x10) matrix in which all columns contain the numbers from 0 to 9, plus some random noise (the random noise is different for each column). Take advantage of broadcasting.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">col</span> <span class="o">+</span> <span class="n">noise</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Your code here
+col = np.reshape(np.arange(10), (-1, 1))
+noise = np.random.randn(1, 10)
+m = col + noise
+print(m)
 </pre></div>
 </div>
 </div>

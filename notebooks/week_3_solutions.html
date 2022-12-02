@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
    10. Profiling
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/week_11.html">
+   11. Object oriented programming
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -593,7 +598,7 @@ title="Print to PDF"
 <p><strong>Numpy</strong> is a widely used Python library for scientific computing. During the last lesson you already learnt quite a few features of <strong>Numpy</strong>. Today, let’s explore more features!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
 </pre></div>
 </div>
 </div>
@@ -603,23 +608,23 @@ title="Print to PDF"
 <p>Let’s review together how to index a multi-dimensional array using slicing</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.arange(1,101).reshape(10,10)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;By default, indexing with colon will return all rows and columns&#39;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,:]</span>  <span class="c1">#[all rows, all columns]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+print(&#39;By default, indexing with colon will return all rows and columns&#39;)
+b = a[:,:]  #[all rows, all columns]
+print(b)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We can define the start at the end of indexed rows&#39;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,:]</span>  <span class="c1">#[all rows, all columns]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+print(&#39;We can define the start at the end of indexed rows&#39;)
+b = a[1:3,:]  #[all rows, all columns]
+print(b)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;or the start at the end of indexed columns&#39;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="c1">#[all rows, all columns]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+print(&#39;or the start at the end of indexed columns&#39;)
+b = a[:,1:3]  #[all rows, all columns]
+print(b)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We can also specify the start and the end for both rows and columns&#39;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="c1">#[all rows, all columns]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+print(&#39;We can also specify the start and the end for both rows and columns&#39;)
+b = a[4:7,1:3]  #[all rows, all columns]
+print(b)
 </pre></div>
 </div>
 </div>
@@ -660,9 +665,9 @@ We can also specify the start and the end for both rows and columns
 <p>Sometimes, it can be useful to skip indexes. This can be achieved by adding another colon (:) and the value that specify how many values you want to skip. Therefore, we can summarize all slicing operations with the following notation [start_idx : end_idx : skip_idx].</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Print every fourth rows&#39;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[::</span><span class="mi">4</span><span class="p">,:]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&#39;Print every fourth rows&#39;)
+b = a[::4,:]
+print(b)
 </pre></div>
 </div>
 </div>
@@ -678,8 +683,8 @@ We can also specify the start and the end for both rows and columns
 <p><strong>Exercise 0</strong> Index the a matrix and print all even numbers between 40 (excluded) and 70.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>  <span class="c1">#[all rows, all columns]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>b = a[4:7,1::2]  #[all rows, all columns]
+print(b)
 </pre></div>
 </div>
 </div>
@@ -698,14 +703,14 @@ We can also specify the start and the end for both rows and columns
 <p>The functions <code>mean</code> and <code>std</code> are used to calculate the mean and standard deviation of the input data (e.g., of an array). Besides calculating the result for the whole data, they can also be used to calculate it along one of axis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.array([[1, 2], [3, 4]])
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The full matrix:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean of the whole matrix is:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The standard deviation of the whole matrix is:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean of each column is:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean of each row is:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The standard deviation of each column is:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+print(&quot;The full matrix:\n&quot;, a)
+print(&quot;The mean of the whole matrix is:&quot;, np.mean(a))
+print(&quot;The standard deviation of the whole matrix is:&quot;, np.std(a))
+print(&quot;The mean of each column is:&quot;, np.mean(a, axis=0))
+print(&quot;The mean of each row is:&quot;, np.mean(a, axis=1))
+print(&quot;The standard deviation of each column is:&quot;, np.std(a, axis=0))
 </pre></div>
 </div>
 </div>
@@ -725,7 +730,7 @@ The standard deviation of each column is: [1. 1.]
 <p>Now, let’s generate a random array drawn from a gaussian distribution N(3, 6.25). The function <code>random.randn</code> samples values from a standard gaussian distribution N(0, 1). Therefore, to get a gaussian distribution distribution N(3, 6.25), we need to multiply the vector by the standard deviation (i.e., sqrt(6.25)) and by adding the mean (i.e., 3).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = 3 + 2.5 * np.random.randn(2, 4)
 </pre></div>
 </div>
 </div>
@@ -733,10 +738,10 @@ The standard deviation of each column is: [1. 1.]
 <p><strong>Exercise 1.</strong> Calculate the mean and standard deviation first of the whole matrix <code>a</code> and then along the axis 0 of the matrix <code>a</code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(np.mean(a))
+print(np.std(a))
+print(np.mean(a, axis=0))
+print(np.std(a, axis=0))
 </pre></div>
 </div>
 </div>
@@ -752,11 +757,11 @@ The standard deviation of each column is: [1. 1.]
 <p>Is it close to what you expect? How would you create another matrix <code>a</code>, in which the mean and the standard deviation are closer to the expected ones?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = 3 + 2.5 * np.random.randn(100, 100)
+print(np.mean(a))
+print(np.std(a))
+print(np.mean(a, axis=0))
+print(np.std(a, axis=0))
 </pre></div>
 </div>
 </div>
@@ -804,16 +809,16 @@ The standard deviation of each column is: [1. 1.]
 <p><strong>Exercise 2.</strong> Besides <code>mean</code> and <code>std</code>, <strong>Numpy</strong> also offers the functions <code>min</code>, <code>max</code>, <code>median</code>, <code>argmin</code>, <code>argmax</code> to calculate the minimum, maximum and median values, index of the minimum and index of the maximum of the array. Apply these functions to the matrix <code>a</code> and along its axis 0 (think of it as coordinates of your array, with axis 0 along rows and axis 1 along columns). Take a better look at the example above to help you understand the importance of this parameter! If you still feel confused check out <a class="reference external" href="https://www.sharpsightlabs.com/blog/numpy-axes-explained/#numpy-axes-quick-explanation">this article</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(np.amin(a))
+print(np.amax(a))
+print(np.median(a))
+print(np.argmin(a))
+print(np.argmax(a))
+print(np.amin(a, axis=0))
+print(np.amax(a, axis=0))
+print(np.median(a, axis=0))
+print(np.argmin(a, axis=0))
+print(np.argmax(a, axis=0))
 </pre></div>
 </div>
 </div>
@@ -891,8 +896,8 @@ The standard deviation of each column is: [1. 1.]
 <p><strong>Numpy</strong> also supports non-standard numbers, such as <strong>np.inf</strong>, which represents infinity, and <strong>np.nan</strong>, which represents “not-a-number”. These can be the results of operations such as division by 0:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">])</span> <span class="o">/</span> <span class="mi">0</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dividing by 0 can generate np.nan or np.inf (also negative) as a result:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.array([0, 1, -4]) / 0
+print(&quot;Dividing by 0 can generate np.nan or np.inf (also negative) as a result:&quot;, a)
 </pre></div>
 </div>
 </div>
@@ -911,8 +916,8 @@ The standard deviation of each column is: [1. 1.]
 <p>Standard operations, when applied to data containing np.nan, will also return <strong>np.nan</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean of a vector with a NaN is: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = [0, np.nan, 1]
+print(&quot;The mean of a vector with a NaN is: &quot;, np.mean(a))
 </pre></div>
 </div>
 </div>
@@ -926,11 +931,11 @@ The standard deviation of each column is: [1. 1.]
 <p><strong>Exercise 3.</strong> Apply the following functions of numpy to the array a: <code>amax</code>, <code>amin</code> and <code>nanmax</code>, <code>nanmin</code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.array([1, 2, np.nan, np.inf])
+print(np.amin(a))
+print(np.amax(a))
+print(np.nanmin(a))
+print(np.nanmax(a))
 </pre></div>
 </div>
 </div>
@@ -947,15 +952,15 @@ inf
 Now, let’s define an athlete with [weight, height] = [111.0, 188.0], and a list of 4 classes [[102.0, 203.0], [132.0, 193.0], [45.0, 155.0], [57.0, 173.0]]. In the next cell, write some code which returns the index of the class of athletes that the athlete should be assigned to.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">111.0</span><span class="p">,</span> <span class="mf">188.0</span><span class="p">])</span>
-<span class="n">codes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">102.0</span><span class="p">,</span> <span class="mf">203.0</span><span class="p">],</span>
-               <span class="p">[</span><span class="mf">132.0</span><span class="p">,</span> <span class="mf">193.0</span><span class="p">],</span>
-               <span class="p">[</span><span class="mf">45.0</span><span class="p">,</span> <span class="mf">155.0</span><span class="p">],</span>
-               <span class="p">[</span><span class="mf">57.0</span><span class="p">,</span> <span class="mf">173.0</span><span class="p">]])</span>
-<span class="n">diff</span> <span class="o">=</span> <span class="n">codes</span> <span class="o">-</span> <span class="n">observation</span>    <span class="c1"># the broadcast happens here</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">diff</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">dist</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>observation = np.array([111.0, 188.0])
+codes = np.array([[102.0, 203.0],
+               [132.0, 193.0],
+               [45.0, 155.0],
+               [57.0, 173.0]])
+diff = codes - observation    # the broadcast happens here
+print(diff.shape)
+dist = np.sqrt(np.sum(diff**2, axis=-1))
+print(np.argmin(dist))
 </pre></div>
 </div>
 </div>
@@ -972,10 +977,10 @@ Now, let’s define an athlete with [weight, height] = [111.0, 188.0], and a lis
 <p>Linear algebra is at the core of Data Science. That’s why <strong>NumPy</strong> offers array-like data structures &amp; dedicated operations and methods. Let’s first have a look together at the <code>dot</code> function as an example, which computes the matrix multiplication between two vectors or matrices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a @ b: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a @ b: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.array([[1,2,3],[2,0,3],[7,-5,1]])
+b = np.array([[3,-1,5],[-2,-6,4], [0,4,4]])
+print(&#39;a @ b: \n&#39;, np.dot(a,b))
+print(&#39;a @ b: \n&#39;, a.dot(b))
 </pre></div>
 </div>
 </div>
@@ -995,10 +1000,10 @@ a @ b:
 <p><strong>Exercise 5.</strong> Define two random matrices, a and b, of sizes (4x2). Transpose b and save in c the matrix product between a and b transposed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = np.random.randn(4, 2)
+b = np.random.randn(4, 2)
+b = np.transpose(b)
+c = np.matmul(a, b)
 </pre></div>
 </div>
 </div>
@@ -1006,11 +1011,11 @@ a @ b:
 <p><strong>Exercise 6.</strong> Can the c matrix be inverted? Check it out by computing its determinant and, if it exists, get the inverse matrix.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mf">1e-6</span><span class="p">:</span>
-    <span class="n">inv_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">inv_c</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The determinant is too small&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if np.abs(np.linalg.det(c)) &gt; 1e-6:
+    inv_c = np.linalg.inv(c)
+    print(inv_c)
+else: 
+    print(&quot;The determinant is too small&quot;)
 </pre></div>
 </div>
 </div>
@@ -1023,11 +1028,11 @@ a @ b:
 <p><strong>Exercise 7.</strong> Using the inverse matrix and the matrix-multiplication operator, you can now solve a matrix-vector equation. Let’s now find the vector x that solve the following equation Ax = b. Given A equal to ([2,1,-2],[3,0,1],[1,1,-1]]) and b equal to ([-3,5,-2]), compute x.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">]]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>A = np.array([[2,1,-2],[3,0,1],[1,1,-1]])
+b = np.transpose(np.array([[-3,5,-2]]))
+print(b.shape)
+x = np.matmul(np.linalg.inv(A), b)
+print(x)
 </pre></div>
 </div>
 </div>
@@ -1043,8 +1048,8 @@ a @ b:
 <p><strong>Exercise 8.</strong> Computing the inverse could be very time-consuming. Therefore, it is always better to take advantage of the highly optimized <strong>NumPy</strong> functions to solve linear equations. Try to solve the same exercise as before but using <code>linalg.solve</code> to compute x.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = np.linalg.solve(A,b)
+print(x)
 </pre></div>
 </div>
 </div>
@@ -1065,11 +1070,11 @@ a @ b:
 <p>In Python, similarly to all of the C-like languages, branching operations are implemented using the <strong>if</strong> keyword. If the expression is true, the statement following it will be executed. Otherwise, it is possible to specify the statement to execute in case of the expression is false, by using the <em>else</em> keyword. Both <strong>if</strong> and <strong>else</strong> need a colon (:) at the line, as in the following example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The random number is positive&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The random number is negative&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>r = np.random.randn()
+if r &gt; 0:
+    print(&quot;The random number is positive&quot;)
+else:
+    print(&quot;The random number is negative&quot;)
 </pre></div>
 </div>
 </div>
@@ -1082,16 +1087,16 @@ a @ b:
 <p>In case you want to create multiple branches by applying more than one condition, you can use the keyword <strong>elif</strong> as in the following example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">animal</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>animal = &quot;cat&quot;
 
-<span class="k">if</span> <span class="n">animal</span> <span class="o">==</span> <span class="s2">&quot;cat&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meow&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">animal</span> <span class="o">==</span> <span class="s2">&quot;dog&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;woof&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">animal</span> <span class="o">==</span> <span class="s2">&quot;cow&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;moo&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I don&#39;t know  the </span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2">&#39;s call, sorry :(&quot;</span><span class="p">)</span>
+if animal == &quot;cat&quot;:
+    print(&quot;meow&quot;)
+elif animal == &quot;dog&quot;:
+    print(&quot;woof&quot;)
+elif animal == &quot;cow&quot;:
+    print(&quot;moo&quot;)
+else:
+    print(f&quot;I don&#39;t know  the {animal}&#39;s call, sorry :(&quot;)
 </pre></div>
 </div>
 </div>
@@ -1104,33 +1109,33 @@ a @ b:
 <p><strong>Exercise 9.</strong> Let’s try to implement a calculator using <strong>if</strong>, <strong>else</strong> and <strong>elif</strong>. The head of the calculator is already written as the following. You can input a, b and option when running the code. Now please finish the calculation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to CALCULATOR!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Welcome to CALCULATOR!&quot;)
 
-<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the first number: &quot;</span><span class="p">))</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the second number: &quot;</span><span class="p">))</span>
+a = float(input(&quot;Enter the first number: &quot;))
+b = float(input(&quot;Enter the second number: &quot;))
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Choose one of the following operations:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 - addition&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 - subtraction&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 - multiplication&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4 - division&quot;</span><span class="p">)</span>
+print(&quot;Choose one of the following operations:&quot;)
+print(&quot;1 - addition&quot;)
+print(&quot;2 - subtraction&quot;)
+print(&quot;3 - multiplication&quot;)
+print(&quot;4 - division&quot;)
 
-<span class="n">option</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>
+option = int(input(&quot;&quot;))
 
-<span class="k">if</span> <span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="k">elif</span> <span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
-<span class="k">elif</span> <span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">3</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-<span class="k">elif</span> <span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">4</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
-<span class="k">if</span> <span class="n">option</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">option</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;result: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid option&quot;</span><span class="p">)</span>
+if (option == 1):
+    result = a + b
+elif (option == 2):
+    result = a - b
+elif (option == 3):
+    result = a * b
+elif (option == 4):
+    result = a / b
+if option &gt; 0 and option &lt; 5:
+    print(&quot;result: %f&quot; % (result))
+else:
+    print(&quot;Invalid option&quot;)
     
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The result is &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+print(&quot;The result is &quot;, result)
 </pre></div>
 </div>
 </div>
@@ -1154,13 +1159,13 @@ The result is  3.0
 <p><strong>Exercise 10.</strong> Try to use for loop and continue to remove all the “h”s in the string “hello, haha, python”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">str_1</span> <span class="o">=</span>  <span class="s2">&quot;hello, haha, python&quot;</span>
-<span class="n">str_2</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">str_1</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;h&#39;</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="n">str_2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">str_2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>str_1 =  &quot;hello, haha, python&quot;
+str_2 = []
+for letter in str_1:
+    if letter == &#39;h&#39;:
+        continue
+    str_2.append(letter)
+print(str_2)
 </pre></div>
 </div>
 </div>
@@ -1173,13 +1178,13 @@ The result is  3.0
 <p><strong>Exercise 11.</strong> Try to use for loop and break to only keep the letters before “p” in the string “hello, haha, python”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">str_1</span> <span class="o">=</span>  <span class="s2">&quot;hello, haha, python&quot;</span>
-<span class="n">str_2</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">str_1</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;p&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="n">str_2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">str_2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>str_1 =  &quot;hello, haha, python&quot;
+str_2 = []
+for letter in str_1:
+    if letter == &#39;p&#39;:
+        break
+    str_2.append(letter)
+print(str_2)
 </pre></div>
 </div>
 </div>
