@@ -379,6 +379,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-while-statements">Control flow: while statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-control-break-statements">Additional control: break statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-python-s-foundation-of-scientific-computing">NumPy: Python’s foundation of scientific computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
 </ul>
             </nav>
         </div>
@@ -527,6 +528,53 @@ This code will:
 <li><p>arrays are sequential objects and can be indexed by the <code class="docutils literal notranslate"><span class="pre">[]</span></code> operator</p></li>
 </ul>
 </section>
+<section id="slicing">
+<h2>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Slicing means getting a subset of ordered objects such as lists, tuples, Numpy arrays, …</p></li>
+<li><p>Slicing syntax is as follow: <code class="docutils literal notranslate"><span class="pre">[start:stop:step]</span></code></p></li>
+<li><p>If the object has more than one dimension, the syntax gets repeated for all dimensions separated with <code class="docutils literal notranslate"><span class="pre">,</span></code> (For example, for 2D Numpy arrays the syntax is <code class="docutils literal notranslate"><span class="pre">[start:stop:step,</span> <span class="pre">start:stop:step]</span></code> )</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">start</span></code> is not specified, it means from index 0 (first element)</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">stop</span></code> is not specified, it means until the last element</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">step</span></code> is not specified, it means <code class="docutils literal notranslate"><span class="pre">step=1</span></code></p></li>
+<li><p>Here are some examples of slicing:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>     <span class="c1"># a 4-item list</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>              <span class="c1"># slicing to get the first two elements</span>
+<span class="go">[0,1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>               <span class="c1"># if we do not specify the start, it is considered 0</span>
+<span class="go">[0,1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>               <span class="c1"># start=0, stop=4, step=2</span>
+<span class="go">[0,2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>               <span class="c1"># start=0, stop=4, step=2 (same as previous line)</span>
+<span class="go">[0,2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>               <span class="c1"># start=0, stop=4, step=-1 (negative steps reverse the order of object)</span>
+<span class="go">[3, 2, 1, 0]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Here are some examples with Numpy arrays:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+<span class="go">		[[0, 1, 2],</span>
+<span class="go">                  [3, 4, 5],</span>
+<span class="go">                  [6, 7, 8]])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>        <span class="c1"># for rows: start=0, stop=2, step=1 (i.e. first two rows)</span>
+<span class="go">array([[0, 1, 2],   #  for columns: start=0, stop=3, step=1 (i.e. all columns)</span>
+<span class="go">       [3, 4, 5]])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>          <span class="c1"># for rows: start=0, stop=3, step=1 (i.e. all the rows)</span>
+<span class="go">array([[1, 2],       # for columns: start=1, stop=3. step=1 (i.e. column 1 to the end)</span>
+<span class="go">       [4, 5],</span>
+<span class="go">       [7, 8]])</span>
+<span class="go">       </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">,::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>     <span class="c1"># for rows: start=0, stop=3, step=2 (i.e. every second row)</span>
+<span class="go">array([[2, 1, 0],   # for columns: start=0, stop=3, step=-1 (i.e. reverse the columns)</span>
+<span class="go">       [8, 7, 6]])</span>
+</pre></div>
+</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -600,6 +648,7 @@ This code will:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-while-statements">Control flow: while statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-control-break-statements">Additional control: break statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-python-s-foundation-of-scientific-computing">NumPy: Python’s foundation of scientific computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
 </ul>
   </nav></div>
 

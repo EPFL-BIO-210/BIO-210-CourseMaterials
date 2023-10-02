@@ -133,3 +133,49 @@ Numpy arrays, the ndarray object:
 - arrays can have any dimensionality
 - arrays contain numbers of the *same* type (e.g. floats, complex numbers, booleans)
 - arrays are sequential objects and can be indexed by the `[]` operator
+
+## Slicing
+
+- Slicing means getting a subset of ordered objects such as lists, tuples, Numpy arrays, ...
+- Slicing syntax is as follow: `[start:stop:step]` 
+- If the object has more than one dimension, the syntax gets repeated for all dimensions separated with `,` (For example, for 2D Numpy arrays the syntax is `[start:stop:step, start:stop:step]` )
+- If `start` is not specified, it means from index 0 (first element)
+- if `stop` is not specified, it means until the last element
+- if `step` is not specified, it means `step=1`
+- Here are some examples of slicing:
+
+```python
+>>> x = [0,1,2,3]     # a 4-item list
+>>> x[0:2]              # slicing to get the first two elements
+[0,1]
+>>> x[:2]               # if we do not specify the start, it is considered 0
+[0,1]
+>>> x[0:4:2]               # start=0, stop=4, step=2
+[0,2]
+>>> x[::2]               # start=0, stop=4, step=2 (same as previous line)
+[0,2]
+>>> x[::-1]               # start=0, stop=4, step=-1 (negative steps reverse the order of object)
+[3, 2, 1, 0]
+```
+
+- Here are some examples with Numpy arrays:
+
+```python
+>>> x = np.array(
+		[[0, 1, 2],
+                  [3, 4, 5],
+                  [6, 7, 8]])
+
+>>> x[0:2, :]        # for rows: start=0, stop=2, step=1 (i.e. first two rows)
+array([[0, 1, 2],   #  for columns: start=0, stop=3, step=1 (i.e. all columns)
+       [3, 4, 5]])
+
+>>> x[:,1:]          # for rows: start=0, stop=3, step=1 (i.e. all the rows)
+array([[1, 2],       # for columns: start=1, stop=3. step=1 (i.e. column 1 to the end)
+       [4, 5],
+       [7, 8]])
+       
+>>> x[::2,::-1]     # for rows: start=0, stop=3, step=2 (i.e. every second row)
+array([[2, 1, 0],   # for columns: start=0, stop=3, step=-1 (i.e. reverse the columns)
+       [8, 7, 6]])
+```
