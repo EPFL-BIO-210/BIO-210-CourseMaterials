@@ -22,3 +22,5 @@ If you have already cloned the repository ([How to?](#how-to-run-jupyter-noteboo
 3. Press the blue button in the top left corner to open the launcher
 1. Open a terminal by selecting the appropriate icon in the launcher. Navigate to the root folder of the project "BIO-210-CourseMaterials".
 5. Type `git pull` and execute the command
+
+6. In case you get an error when trying to use `git pull`, rename the notebook from last week (`week_1.ipynb`) and then run `git pull` again.
