@@ -17,3 +17,4 @@ parts:
     sections:
     - title: week 2 - notebook
       file: notebooks/week_2.ipynb
+  - file: docs/week_3
