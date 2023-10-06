@@ -17,4 +17,9 @@ parts:
     sections:
     - title: week 2 - notebook
       file: notebooks/week_2.ipynb
+    - title: week 2 - notebook with solutions
+      file: notebooks/week_2_solutions.ipynb
   - file: docs/week_3
+    sections:
+    - title: week 3 - notebook
+      file: notebooks/week_3.ipynb
