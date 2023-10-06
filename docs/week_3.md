@@ -26,7 +26,7 @@ For your projects, you will use Git which is a free and open source distributed 
 - Download the latest version and start the installer
 - Follow the Git Setup wizard
 - Open the windows command prompt (or Git Bash)
-- Type: git --version   (to verify python is installed)
+- Type: git --version   (to verify git is installed)
 
 ##### Mac
 
@@ -34,7 +34,7 @@ For your projects, you will use Git which is a free and open source distributed 
 - Download the latest version and start the installer
 - Follow the instructions
 - Open the command prompt "terminal"
-- Type: git --version   (to verify python is installed)
+- Type: git --version   (to verify git is installed)
 
 ##### Linux
 
