@@ -99,7 +99,9 @@ For example, let’s install jupyter lab in our virtual environment:
 
 `conda install -c conda-forge jupyterlab`
 
-Note that conda might not have all the packages you need. In this case, you can use pip to install the missing packages (for a comparison between conda and pip, you can have a look [here](https://pythonspeed.com/articles/conda-vs-pip/))
+Note that conda might not have all the packages you need. In this case, you can use pip to install the missing packages (for a comparison between conda and pip, you can have a look [here](https://pythonspeed.com/articles/conda-vs-pip/)), e.g.:
+
+`pip install numpy`
 
 Remaining inside the generated virtual environment, we can navigate to the class repository.
 
