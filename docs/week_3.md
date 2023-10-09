@@ -26,7 +26,7 @@ For your projects, you will use Git which is a free and open source distributed 
 - Download the latest version and start the installer
 - Follow the Git Setup wizard
 - Open the windows command prompt (or Git Bash)
-- Type: git --version   (to verify git is installed)
+- Type: `git --version`   (to verify git is installed)
 
 ##### Mac
 
@@ -34,7 +34,7 @@ For your projects, you will use Git which is a free and open source distributed 
 - Download the latest version and start the installer
 - Follow the instructions
 - Open the command prompt "terminal"
-- Type: git --version   (to verify git is installed)
+- Type: `git --version`   (to verify git is installed)
 
 ##### Linux
 
@@ -63,19 +63,19 @@ Anaconda is a distribution of Python used for package management and deployment.
 
 - Follow the instructions of the following link: [Anaconda for Windows](https://docs.anaconda.com/anaconda/install/windows/)
 - Open anaconda prompt
-- Type: python --version  (to verify python is installed)
+- Type: `python --version`  (to verify python is installed)
 
 ##### Mac
 
 - Follow the instructions of the following link: [Anaconda for Mac](https://docs.anaconda.com/anaconda/install/mac-os/)
 - Open terminal
-- Type: python --version   (to verify python is installed)
+- Type: `python --version`   (to verify python is installed)
 
 ##### Linux
 
 - Follow the instructions of the following link: [Anaconda for Linux](https://docs.anaconda.com/anaconda/install/linux/)
 - Open terminal
-- Type: python --version  (to verify python is installed)
+- Type: `python --version`  (to verify python is installed)
 
 ### Tutorial
 
