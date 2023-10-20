@@ -31,3 +31,4 @@ parts:
     - file: docs/week_4_git_cheatsheet
     - title: Recommended tutorial on Git
       url: https://www.youtube.com/watch?v=HkdAHXoRtos
+  - file: docs/week_5
