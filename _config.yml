@@ -1,7 +1,6 @@
 title: BIO-210
 author: A. Mathis, L. Stoffl, A. Marin Vargas, A. Chiappa, B. Borzyszkowski, H. Qi, M. Zhou, O. Ulrich, A. Saadat, S. Zhang
-
-
+copyright: "2023"
 logo: docs/images/logo.png
 only_build_toc_files: true
 
