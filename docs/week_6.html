@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Details on weekly releases &#8212; BIO-210</title>
+    <title>6. Functionify &#8212; BIO-210</title>
   
   
   
@@ -62,11 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/release_notes';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/week_6';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Python Introduction I" href="week_1.html" />
-    <link rel="prev" title="Run Jupyter Notebooks with EPFL’s Noto" href="noto_guide.html" />
+    <link rel="prev" title="5. Project introduction" href="week_5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,11 +166,11 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="noto_guide.html">Run Jupyter Notebooks with EPFL’s Noto</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Details on weekly releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Details on weekly releases</a></li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="week_1.html">1. Python Introduction I</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_1.html">week 1 - notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_1_solutions.html">week 1 - notebook with solutions</a></li>
@@ -193,7 +192,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="week_5.html">5. Project introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="week_6.html">6. Functionify</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Functionify</a></li>
 </ul>
 
     </div>
@@ -265,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fdocs/release_notes.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fdocs/week_6.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/docs/release_notes.md" target="_blank"
+      <li><a href="../_sources/docs/week_6.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,9 +363,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -377,23 +374,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Details on weekly releases</h1>
+    <h1>Functionify</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-release">What is a release?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#release-schedule">Release schedule</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-release-rules">Project release rules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-and-manage-a-release">How to create and manage a release?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-should-your-project-look">How should your project look?</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -403,154 +388,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="details-on-weekly-releases">
-<h1>Details on weekly releases<a class="headerlink" href="#details-on-weekly-releases" title="Permalink to this heading">#</a></h1>
-<p>Releases for your projects were discussed Lecture 5. Here we give detailed information in one location.</p>
-<section id="what-is-a-release">
-<h2>What is a release?<a class="headerlink" href="#what-is-a-release" title="Permalink to this heading">#</a></h2>
-<p>Releases are deployable software iterations you can package and make available for a wider audience to download and use. You can create a release to package software, along with release notes and links to binary files. Releases are based on Git tags (versions), which mark a specific point in your repository’s history. Read more about releases in the official <a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases">Github Documentation</a>.</p>
-<p>Making releases is common practice for packages: e.g. <a class="reference external" href="https://github.com/numpy/numpy/releases/tag/v1.21.3">numpy v1.21.3</a></p>
-</section>
-<section id="release-schedule">
-<h2>Release schedule<a class="headerlink" href="#release-schedule" title="Permalink to this heading">#</a></h2>
-<p>Every release apart from v8 should be released at <em>10am on Mondays</em> (before the lecture) according to the following schedule:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p></p></th>
-<th class="head text-left"><p>Date</p></th>
-<th class="head text-left"><p>Topic</p></th>
-<th class="head text-left"><p>Software version</p></th>
-<th class="head text-left"><p>Software releases</p></th>
-<th class="head text-left"><p>Grading / Feedback</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>0</p></td>
-<td class="text-left"><p>18/09/2023</p></td>
-<td class="text-left"><p>Public holiday</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>1</p></td>
-<td class="text-left"><p>25/09/2023</p></td>
-<td class="text-left"><p>Python introduction I</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>2</p></td>
-<td class="text-left"><p>02/10/2023</p></td>
-<td class="text-left"><p>Python introduction II</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>3</p></td>
-<td class="text-left"><p>09/10/2023</p></td>
-<td class="text-left"><p>VS Code</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>4</p></td>
-<td class="text-left"><p>16/10/2023</p></td>
-<td class="text-left"><p>Git	and GitHub</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>5</p></td>
-<td class="text-left"><p>23/10/2023</p></td>
-<td class="text-left"><p>Project introduction</p></td>
-<td class="text-left"><p>v1</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>6</p></td>
-<td class="text-left"><p>30/10/2023</p></td>
-<td class="text-left"><p>Functionify</p></td>
-<td class="text-left"><p>v2</p></td>
-<td class="text-left"><p>v1</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>7</p></td>
-<td class="text-left"><p>06/11/2023</p></td>
-<td class="text-left"><p>Visualization and documentation</p></td>
-<td class="text-left"><p>v3</p></td>
-<td class="text-left"><p>v2</p></td>
-<td class="text-left"><p>code review (API)</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>8</p></td>
-<td class="text-left"><p>13/11/2023</p></td>
-<td class="text-left"><p>Unit-tests, functional tests</p></td>
-<td class="text-left"><p>v4</p></td>
-<td class="text-left"><p>v3</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>9</p></td>
-<td class="text-left"><p>20/11/2023</p></td>
-<td class="text-left"><p>Code refactoring</p></td>
-<td class="text-left"><p>v5</p></td>
-<td class="text-left"><p>v4</p></td>
-<td class="text-left"><p>graded (tests)</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>10</p></td>
-<td class="text-left"><p>27/11/2023</p></td>
-<td class="text-left"><p>Profiling and code optimization</p></td>
-<td class="text-left"><p>v6</p></td>
-<td class="text-left"><p>v5</p></td>
-<td class="text-left"><p>code review</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>11</p></td>
-<td class="text-left"><p>04/12/2023</p></td>
-<td class="text-left"><p>Object oriented programming</p></td>
-<td class="text-left"><p>v7</p></td>
-<td class="text-left"><p>v6</p></td>
-<td class="text-left"><p>graded (speed)</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>12</p></td>
-<td class="text-left"><p>11/12/2023</p></td>
-<td class="text-left"><p>Model analysis and project report</p></td>
-<td class="text-left"><p>v8</p></td>
-<td class="text-left"><p>v7</p></td>
-<td class="text-left"><p>code review (OO)</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>13</p></td>
-<td class="text-left"><p>18/12/2023</p></td>
-<td class="text-left"><p>Wrap up</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p>v8</p></td>
-<td class="text-left"><p>graded (project)</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="project-release-rules">
-<h2>Project release rules<a class="headerlink" href="#project-release-rules" title="Permalink to this heading">#</a></h2>
-<p>During project development, students are expected to regularly release new versions of their code according to the <span class="xref myst">class schedule listed above</span>. Selected releases will be subject to code review and grading as part of the course assessment as indicated in the table.</p>
-<p>Use versioning for making your release. The only relevant rules for the class are:</p>
-<ul class="simple">
-<li><p>make major releases per week, e.g. <code class="docutils literal notranslate"><span class="pre">v1.0</span></code></p></li>
-<li><p>if you find a bug/error after the release date, do not delete your release, but release a minor/patch release, e.g. <code class="docutils literal notranslate"><span class="pre">v1.1</span></code> with a description: <code class="docutils literal notranslate"><span class="pre">fixing</span> <span class="pre">xyz</span> <span class="pre">bug</span></code>. That way we know that you didn’t miss the original deadline and later improved your code. We will always grade/review the latest available release.</p></li>
-</ul>
-<p>However, if you’re interested you can find more information about versioning in Python <a class="reference external" href="https://py-pkgs.org/07-releasing-versioning.html">here</a>.</p>
-</section>
-<section id="how-to-create-and-manage-a-release">
-<h2>How to create and manage a release?<a class="headerlink" href="#how-to-create-and-manage-a-release" title="Permalink to this heading">#</a></h2>
-<p>You can create new releases with release notes, &#64;mentions of contributors, and links to binary files, as well as edit or delete existing releases.</p>
-<p>To create a release follow the official <a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">Github Documentation</a>.</p>
-<p>With <code class="docutils literal notranslate"><span class="pre">git</span></code> one can easily <a class="reference external" href="https://stackoverflow.com/questions/791959/download-a-specific-tag-with-git">checkout specific tags</a> in the following way:</p>
-<ul class="simple">
-<li><p>list the tags (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-l</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">tags/&lt;tag_name&gt;</span></code></p></li>
-</ul>
-</section>
-<section id="how-should-your-project-look">
-<h2>How should your project look?<a class="headerlink" href="#how-should-your-project-look" title="Permalink to this heading">#</a></h2>
-<p>We provide an example project for you to compare. Please check it out at <a class="reference external" href="https://github.com/EPFL-BIO-210/demo-project">EPFL-BIO-210/demo-project</a>.</p>
-<p>Feel free to send us pull-requests if you want to suggest changes. You can check out the releases of this project <a class="reference external" href="https://github.com/EPFL-BIO-210/demo-project/releases">here</a>!</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="functionify">
+<h1><span class="section-number">6. </span>Functionify<a class="headerlink" href="#functionify" title="Permalink to this heading">#</a></h1>
+<p>This week, we will refactor our projects into more modular form using functions. As a reminder, you should release your code every week as detailed in the <a class="reference internal" href="release_notes.html"><span class="doc std std-doc">release section</span></a>. This weeks version will get a code review from us!</p>
+<p>Please refer to the lecture notes for a deeper dive into functions, <code class="docutils literal notranslate"><span class="pre">def</span></code>, scoping, namespaces, LEGB rule, global as well as Python’s argument matching rules.</p>
+<p><object data="../week6/week6.pdf" type="application/pdf" width="100%" height="900px"></object></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -584,22 +426,13 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="noto_guide.html"
+       href="week_5.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Run Jupyter Notebooks with EPFL’s Noto</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Project introduction</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="week_1.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Python Introduction I</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -607,24 +440,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-release">What is a release?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#release-schedule">Release schedule</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-release-rules">Project release rules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-create-and-manage-a-release">How to create and manage a release?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-should-your-project-look">How should your project look?</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
