@@ -33,7 +33,7 @@ parts:
       url: https://www.youtube.com/watch?v=HkdAHXoRtos
   - file: docs/week_5
     sections:
-    - file: problem_sets/week4/Git Manual.pdf
+    - file: problem_sets/week4/Git%20Manual.pdf
     - title: BIO-210 tutorial on how to use git in Visual Studio Code by Jennifer Shan
       url: https://www.youtube.com/watch?v=oepxj-e78PA
   - file: docs/week_6
