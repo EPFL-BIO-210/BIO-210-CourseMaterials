@@ -33,8 +33,8 @@ parts:
       url: https://www.youtube.com/watch?v=HkdAHXoRtos
   - file: docs/week_5
     sections:
-    - title: Visual Git Guide for this class by Viva Berlenghi 
-      file: problem_sets/week4/Git%20Manual
+    - title: Git BIO-210 Survival Kit by Viva Berlenghi
+      file: docs/week_5_git_guide
     - title: How to use git for your project in Visual Studio Code by Jennifer Shan
       url: https://www.youtube.com/watch?v=oepxj-e78PA
   - file: docs/week_6
