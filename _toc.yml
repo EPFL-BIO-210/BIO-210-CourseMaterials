@@ -32,13 +32,9 @@ parts:
     - title: Recommended tutorial on Git
       url: https://www.youtube.com/watch?v=HkdAHXoRtos
   - file: docs/week_5
-    sections:
-    - title: Git BIO-210 Survival Kit by Viva Berlenghi
-      file: docs/week_5_git_guide
-    - title: How to use git for your project in Visual Studio Code by Jennifer Shan
-      url: https://www.youtube.com/watch?v=oepxj-e78PA
   - file: docs/week_6
   - file: docs/week_7
   - file: docs/week_8
   - file: docs/week_9
   - file: docs/week_10
+  - file: docs/week_11
