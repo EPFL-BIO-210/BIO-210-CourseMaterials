@@ -27,5 +27,4 @@ Link to the EPFL's Noto homepage: https://noto.epfl.ch
 |	11	|	25/11/2024	|	Profiling and code optimization	| v6 | v5 | code review  |
 |	12	|	02/12/2024	|	Object oriented programming	| v7 | v6 | graded (speed)|
 |	13	|	09/12/2024	|	Model analysis and project report | v8 | v7 | code review (OO) |
-|	15	|	16/12/2024	|	Wrap up	|  | v8 | graded (project) |
-|	16	|	23/12/2024	|	Wrap up	|  | v8 | graded (project) |
+|	14	|	16/12/2024	|	Wrap up	|  | v8 | graded (project) |
