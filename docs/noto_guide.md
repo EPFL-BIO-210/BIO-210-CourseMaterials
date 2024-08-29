@@ -1,0 +1,26 @@
+# Run Jupyter Notebooks with EPFL's Noto
+
+## What is NOTO?
+
+Noto is EPFL’s centralized JupyterLab platform that allows teachers and students to use Jupyter Notebooks online without having to install anything on their computer.
+
+## How to log into Noto?
+1. Go to https://noto.epfl.ch
+2. Log in with your Gaspar credentials
+
+## How to run Jupyter Notebooks online with Noto?
+1. Log into noto ([How to?](#how-to-log-into-noto))
+3. Press the blue button in the top left corner to open the launcher
+4. Open a terminal by selecting the appropriate icon in the launcher. Navigagte to the folder where you want to download the repository BIO-210-CourseMaterials.
+5. Type: `git clone https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials.git`
+6. Navigate to the `notebooks` directory and open the Jupter Notebook of your choice
+
+## How to download the latest Jupyter Notebooks?
+If you have already cloned the repository ([How to?](#how-to-run-jupyter-notebooks-online-with-noto)) and you want to update the content of the repository to the latest version, you have to:
+
+1. Log into noto ([How to?](#how-to-log-into-noto))
+3. Press the blue button in the top left corner to open the launcher
+1. Open a terminal by selecting the appropriate icon in the launcher. Navigate to the root folder of the project "BIO-210-CourseMaterials".
+5. Type `git pull` and execute the command
+
+6. In case you get an error when trying to use `git pull`, rename the notebook from last week (`week_1.ipynb`) and then run `git pull` again. Note, this be explained in our class & exercises on git! 
