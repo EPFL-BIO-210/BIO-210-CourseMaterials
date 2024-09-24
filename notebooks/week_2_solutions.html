@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week_2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week_2_solutions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python Introduction II - Data Types 2 and Numpy" href="week_2_solutions.html" />
-    <link rel="prev" title="2. Python Introduction II" href="../docs/week_2.html" />
+    <link rel="next" title="3. Git and Github" href="../docs/week_3.html" />
+    <link rel="prev" title="Python Introduction II - Data Types 2 and Numpy" href="week_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../docs/week_2.html">2. Python Introduction II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">week 2 - notebook</a></li>
-<li class="toctree-l2"><a class="reference internal" href="week_2_solutions.html">week 2 - notebook with solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="week_2.html">week 2 - notebook</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">week 2 - notebook with solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../docs/week_3.html">3. Git and Github</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -261,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fnotebooks/week_2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fnotebooks/week_2_solutions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +291,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/notebooks/week_2.ipynb" target="_blank"
+      <li><a href="../_sources/notebooks/week_2_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -433,6 +433,23 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = (1, 3, 5, 6) , type of x:  &lt;class &#39;tuple&#39;&gt;
+The element of the tuple in position 2 is 5
+Tuple including the 10 digits:  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tuple including the 10 digits: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
+</pre></div>
+</div>
+</div>
 </div>
 <p>The last statement should have raised a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>, as we were trying to change an element in the tuple, which is not allowed.</p>
 <p>Tuples can be conveniently looped through with a for statement. Unlike lists, tuples do not offer any “tuple comprehension” syntax. The keyword <code>tuple</code> is necessary to define a tuple from a generator.</p>
@@ -441,6 +458,11 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="n">x_squared</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">el</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 9, 25, 36)
 </pre></div>
 </div>
 </div>
@@ -457,6 +479,13 @@ document.write(`
 
 <span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Set including the 10 digits: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = {1, 3, 5, 6, 3} , type of x:  &lt;class &#39;set&#39;&gt;
+Resulting set:  {1, 3, 5, 6}  NB: all elements are unique!
+Set including the 10 digits:  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 </pre></div>
 </div>
 </div>
@@ -478,6 +507,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial set:  {1, 2, 3}
+After adding 6:  {1, 2, 3, 6}
+After adding the numbers between 5 and 7:  {1, 2, 3, 5, 6, 7}
+After removing 3:  {1, 2, 5, 6, 7}
+</pre></div>
+</div>
+</div>
 </div>
 <p>As no ordering is defined, it is not possible to access a specific element of a set by index. You can instead iterate through the elements of a set with a <strong>for loop</strong> or with the <strong>set comprehension</strong> syntax. Note that the definition ordering is not preserved when printing!</p>
 <div class="cell docutils container">
@@ -491,12 +528,22 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 36, 9, 25}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
 <span class="n">x_squared</span> <span class="o">=</span> <span class="p">{</span><span class="n">el</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">x</span><span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x_squared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 36, 9, 25}
 </pre></div>
 </div>
 </div>
@@ -512,6 +559,15 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A minus B: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A intersection B: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A union B: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A =  {2, 5, -1}
+B =  {9, 4, 5}
+A minus B:  {2, -1}
+A intersection B:  {5}
+A union B:  {2, 4, 5, 9, -1}
 </pre></div>
 </div>
 </div>
@@ -540,6 +596,15 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [3 4 1] , shape of a:  (3,)
+b =
+ [[ 1  2]
+ [ 4 -1]
+ [ 3  3]] , shape of b:  (3, 2)
+</pre></div>
+</div>
+</div>
 </div>
 <p>In the previous example, numpy can automatically infer the dimensions of the input data and organize them accordingly (uni- and bi-dimensional arrays). Other common ways of initializing arrays are with constant or random values. Numpy offers the handy functions <code>zeros</code>, <code>ones</code> and the module <code>random</code>. For example, <code>random.randn</code> samples the elements of the matrix from a standard normal distribution.</p>
 <div class="cell docutils container">
@@ -558,6 +623,23 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ones((3, 4)) =
+[[1. 1. 1. 1.]
+ [1. 1. 1. 1.]
+ [1. 1. 1. 1.]]
+
+zeros((2, 5)) =
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+
+random.randn(3, 3) =
+[[ 1.70596578  1.39319054  1.62815468]
+ [-1.0738511   0.10633754 -0.17790967]
+ [-0.65043917  1.39673578 -0.7873843 ]]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Other useful array creation functions include <code>arange</code> and <code>linspace</code>. The first one behaves as <code>range</code>, but returning an array. The second genertes an array of a given number of equally spaced values between a minimum and a maximum.</p>
 <div class="cell docutils container">
@@ -567,6 +649,12 @@ document.write(`
 
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;linspace(3, 4, 11) =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>arange(3, 10) = [3 4 5 6 7 8 9]
+linspace(3, 4, 11) = [3.  3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4. ]
 </pre></div>
 </div>
 </div>
@@ -592,12 +680,44 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = [ 1  3 -2] 	b = [ 4 -1  2]
+a + b =  [5 2 0]
+a - b =  [-3  4 -4]
+a * b =  [ 4 -3 -4]
+a / b =  [ 0.25 -3.   -1.  ]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Also many common analytic functions are implemented in Numpy, e.g, <code>log</code>, <code>exp</code>, <code>sin</code>, <code>sqrt</code> and many others. They are also applied element-wise to multidimensional arrays.</p>
 <p><strong>Exercise 1.</strong> Print the sine of 100 equally spaced values in the interval [-5, 5]</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_vals</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.95892427  0.98264051  0.99633934  0.99988113  0.99322975  0.97645303
+  0.94972199  0.91330913  0.86758566  0.8130177   0.75016154  0.67965796
+  0.60222569  0.51865411  0.42979519  0.33655477  0.23988339  0.14076655
+  0.04021468 -0.06074715 -0.1610897  -0.25979004 -0.35584199 -0.44826636
+ -0.53612093 -0.61851008 -0.69459392 -0.76359681 -0.82481532 -0.87762535
+ -0.92148855 -0.95595775 -0.98068157 -0.99540796 -0.99998679 -0.99437139
+ -0.978619   -0.95289021 -0.91744731 -0.87265161 -0.81895978 -0.75691917
+ -0.68716224 -0.61040014 -0.52741539 -0.43905397 -0.34621667 -0.24984992
+ -0.1509361  -0.05048358  0.05048358  0.1509361   0.24984992  0.34621667
+  0.43905397  0.52741539  0.61040014  0.68716224  0.75691917  0.81895978
+  0.87265161  0.91744731  0.95289021  0.978619    0.99437139  0.99998679
+  0.99540796  0.98068157  0.95595775  0.92148855  0.87762535  0.82481532
+  0.76359681  0.69459392  0.61851008  0.53612093  0.44826636  0.35584199
+  0.25979004  0.1610897   0.06074715 -0.04021468 -0.14076655 -0.23988339
+ -0.33655477 -0.42979519 -0.51865411 -0.60222569 -0.67965796 -0.75016154
+ -0.8130177  -0.86758566 -0.91330913 -0.94972199 -0.97645303 -0.99322975
+ -0.99988113 -0.99633934 -0.98264051 -0.95892427]
 </pre></div>
 </div>
 </div>
@@ -606,6 +726,14 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vals</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.         1.         1.41421356 1.73205081 2.         2.23606798
+ 2.44948974 2.64575131 2.82842712 3.        ]
 </pre></div>
 </div>
 </div>
@@ -615,6 +743,15 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">m_prod</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The shape, as expected, is </span><span class="si">{</span><span class="n">m_prod</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The shape, as expected, is (3, 2)
 </pre></div>
 </div>
 </div>
@@ -633,12 +770,33 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1  2]
+ [ 4 -1]
+ [ 3  3]]
+
+The element in position (1, 0) is  4
+</pre></div>
+</div>
+</div>
 </div>
 <p>If you need to access larger portions of <strong>contiguous</strong> or regularly spaced elements of a numpy array, then you can use the <strong>slicing</strong> operations. The simplest form of slicing just works like the access by index, but replacing the index in one or more dimensions with 2 indices, separated by “:”. For instance, the syntax x[2:4, 3:9] returns the values with index 2 to 4 (4 excluded) along the first axis, and from 3 to 9 (9 excluded) along the second axis. You can optionally define a <strong>skip value</strong>: the syntax x[2:9:2] will select only every second element between 2 and 9. It is often useful to leave one or more values empty. x[:4] means “from the start up to 4”, while x[3:] means “from 3 up to the end”. x[:, 3] would return the full column 3. Tip: indices also work backwards, meaning that the last element can also be retrieved with the index -1, the second last with -2, etc.</p>
 <p><strong>Exercise 4.</strong> Define a random array (values from the normal distribution) of shape (3, 4, 4). Slice the 2x2x2 cube at the beginning of each axis and print it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">cube</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="mi">2</span><span class="p">,:</span><span class="mi">2</span><span class="p">,:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[-1.08328854  1.28221963]
+  [-1.27201834 -0.37782782]]
+
+ [[-1.08413894 -1.09632892]
+  [ 1.30228114  0.22380735]]]
 </pre></div>
 </div>
 </div>
@@ -647,6 +805,14 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">arr_undersampled</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[::</span><span class="mi">2</span><span class="p">,::</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr_undersampled</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 4)
 </pre></div>
 </div>
 </div>
@@ -655,6 +821,19 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">row</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">row</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2.67459331 -0.82852207 -1.10716602  0.3684717  -0.88834742]
+ [-0.96288291  0.4976672  -1.6695397   1.29641602 -0.94383472]
+ [-2.33519636  0.46634051 -0.29988549 -1.23414653  0.46697357]
+ [ 1.          1.          1.          0.43479929  0.27697386]
+ [ 1.21550755 -0.63349573 -2.98844918 -1.48884266  0.52650454]]
 </pre></div>
 </div>
 </div>
@@ -673,11 +852,25 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original shape is (100,)
+The new shape is (10, 10)
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>Exercise 7.</strong> Define a random matrix of size (100x100) and reshape it into an array of size (100x10x10). Try not specifying the last dimension and verify that it still has the expected shape</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">x_reshaped</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The reshaped shape is&quot;</span><span class="p">,</span> <span class="n">x_reshaped</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The reshaped shape is (100, 10, 10)
 </pre></div>
 </div>
 </div>
@@ -687,6 +880,19 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">m_t</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">m_t_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m_t</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">m_m_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">m_t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M M^T is symmetric:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">m_m_t</span><span class="p">,</span> <span class="n">m_m_t</span><span class="o">.</span><span class="n">transpose</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M^T M is symmetric:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">m_t_m</span><span class="p">,</span> <span class="n">m_t_m</span><span class="o">.</span><span class="n">transpose</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M M^T is symmetric: True
+M^T M is symmetric: True
 </pre></div>
 </div>
 </div>
@@ -696,6 +902,19 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">concat_axis0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">concat_axis1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shape after concatenation along axis 0:&quot;</span><span class="p">,</span> <span class="n">concat_axis0</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shape after concatenation along axis 1:&quot;</span><span class="p">,</span> <span class="n">concat_axis1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape after concatenation along axis 0: (4, 5)
+Shape after concatenation along axis 1: (2, 10)
 </pre></div>
 </div>
 </div>
@@ -713,6 +932,13 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3. 5.]
+ [4. 2.]
+ [1. 0.]]
+</pre></div>
+</div>
+</div>
 </div>
 <p>In the previous code we have summed a (3x2) matrix and a (3x1) vector. Numpy succeeds in the task because it interprets the operation as “sum vector y to all the columns of x”. In fact, broadcasting follows these 2 rules:</p>
 <p>1 - If the number of dimensions between the two matrices is different, prepend dummy dimensions to the array with fewer dimensions until the numbers match.</p>
@@ -722,6 +948,34 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
+<span class="n">row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">row</span> <span class="o">+</span> <span class="n">noise</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.08186659  0.74109193  0.65680219 -0.30619884 -0.6734278   1.19796811
+  -0.41357663 -0.08581642  0.54504751 -0.94848207]
+ [ 2.08186659  1.74109193  1.65680219  0.69380116  0.3265722   2.19796811
+   0.58642337  0.91418358  1.54504751  0.05151793]
+ [ 3.08186659  2.74109193  2.65680219  1.69380116  1.3265722   3.19796811
+   1.58642337  1.91418358  2.54504751  1.05151793]
+ [ 4.08186659  3.74109193  3.65680219  2.69380116  2.3265722   4.19796811
+   2.58642337  2.91418358  3.54504751  2.05151793]
+ [ 5.08186659  4.74109193  4.65680219  3.69380116  3.3265722   5.19796811
+   3.58642337  3.91418358  4.54504751  3.05151793]
+ [ 6.08186659  5.74109193  5.65680219  4.69380116  4.3265722   6.19796811
+   4.58642337  4.91418358  5.54504751  4.05151793]
+ [ 7.08186659  6.74109193  6.65680219  5.69380116  5.3265722   7.19796811
+   5.58642337  5.91418358  6.54504751  5.05151793]
+ [ 8.08186659  7.74109193  7.65680219  6.69380116  6.3265722   8.19796811
+   6.58642337  6.91418358  7.54504751  6.05151793]
+ [ 9.08186659  8.74109193  8.65680219  7.69380116  7.3265722   9.19796811
+   7.58642337  7.91418358  8.54504751  7.05151793]
+ [10.08186659  9.74109193  9.65680219  8.69380116  8.3265722  10.19796811
+   8.58642337  8.91418358  9.54504751  8.05151793]]
 </pre></div>
 </div>
 </div>
@@ -761,20 +1015,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../docs/week_2.html"
+       href="week_2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Python Introduction II</p>
+        <p class="prev-next-title">Python Introduction II - Data Types 2 and Numpy</p>
       </div>
     </a>
     <a class="right-next"
-       href="week_2_solutions.html"
+       href="../docs/week_3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python Introduction II - Data Types 2 and Numpy</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Git and Github</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

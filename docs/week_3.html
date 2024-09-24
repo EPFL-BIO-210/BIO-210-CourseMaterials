@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Python Introduction I &#8212; BIO-210</title>
+    <title>3. Git and Github &#8212; BIO-210</title>
   
   
   
@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/week_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/week_3';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python Introduction I - Programming Basics and Data Types" href="../notebooks/week_1.html" />
-    <link rel="prev" title="Visual Studio Code, Git and Anaconda" href="installation.html" />
+    <link rel="next" title="Git Cheat Sheet" href="week_3_git_cheatsheet.html" />
+    <link rel="prev" title="Python Introduction II - Data Types 2 and Numpy" href="../notebooks/week_2_solutions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Visual Studio Code, Git and Anaconda</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Python Introduction I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="week_1.html">1. Python Introduction I</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_1.html">week 1 - notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_1_solutions.html">week 1 - notebook with solutions</a></li>
 </ul>
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_2_solutions.html">week 2 - notebook with solutions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="week_3.html">3. Git and Github</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Git and Github</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="week_3_git_cheatsheet.html">Git cheatsheet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_3.html">week 3 - notebook</a></li>
 </ul>
@@ -259,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fdocs/week_1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fdocs/week_3.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/docs/week_1.md" target="_blank"
+      <li><a href="../_sources/docs/week_3.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -360,9 +360,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -373,23 +371,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Python Introduction I</h1>
+    <h1>Git and Github</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-s-core-built-in-objects">Python’s core built-in objects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers-in-python">Numbers in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries">Dictionaries</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -399,123 +385,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="python-introduction-i">
-<h1><span class="section-number">1. </span>Python Introduction I<a class="headerlink" href="#python-introduction-i" title="Permalink to this heading">#</a></h1>
-<section id="python-s-core-built-in-objects">
-<h2>Python’s core built-in objects<a class="headerlink" href="#python-s-core-built-in-objects" title="Permalink to this heading">#</a></h2>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Object type:</p></td>
-<td><p>Examples:</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>Numbers</em></p></td>
-<td><p>123, 3.14, math.pi, …</p></td>
-</tr>
-<tr class="row-even"><td><p><em>Strings</em></p></td>
-<td><p>‘abc’, ‘EPFL’, “Geneva”, …</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>Lists</em></p></td>
-<td><p>[1, [2, ‘troi’],4], list(range(99)</p></td>
-</tr>
-<tr class="row-even"><td><p>Dictionaries</p></td>
-<td><p>{‘Apples’: 200, ‘Pears’: 123.5}, dict(hours=10)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Tuples</p></td>
-<td><p>(x,y,z), (1, [2, ‘troi’],4)</p></td>
-</tr>
-<tr class="row-even"><td><p>Sets</p></td>
-<td><p>set(‘abc’), {‘E’,’P’,’F’,’L’}</p></td>
-</tr>
-<tr class="row-odd"><td><p>Other core types</p></td>
-<td><p>Booleans, types, None</p></td>
-</tr>
-<tr class="row-even"><td><p>Files</p></td>
-<td><p>open(‘data.txt’), open(r(‘/home/alex/abc.bin’),’wb’)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Program unit types</p></td>
-<td><p>Functions, modules, classes</p></td>
-</tr>
-</tbody>
-</table>
-<p>For more details check out the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#">Python docs!</a></p>
-<p>Here, we briefly summarize Numbers, Strings, Lists and Dictionaries.</p>
-</section>
-<section id="numbers-in-python">
-<h2>Numbers in Python<a class="headerlink" href="#numbers-in-python" title="Permalink to this heading">#</a></h2>
-<p>Python’s core objects include integers, floating-point, complex numbers, etc.</p>
-<p>Types of numbers:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> represents integers, e.g. <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">14213555</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> represents reals, e.g. <code class="docutils literal notranslate"><span class="pre">pi</span></code>, <code class="docutils literal notranslate"><span class="pre">1.0</span></code>, <code class="docutils literal notranslate"><span class="pre">0.000001</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">complex</span></code> represents complex numbeers, e.g. real + imaginary</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> represents Boolean values, <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code> returns the type of Python objects</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>           <span class="c1"># again, ```&gt;&gt;&gt;```m denotes what you type in a Python shell</span>
-<span class="go">int                   # here is the output!</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
-<span class="go">float</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">bool</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>      <span class="c1"># define a complex number</span>
-<span class="go">(1+1j)                # evaluates to this!</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">complex</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>	  <span class="c1"># remember: sqrt(-1) = j</span>
-<span class="go">(-1,0j)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-<span class="go">complex</span>
-</pre></div>
-</div>
-</section>
-<section id="strings">
-<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>strings are concatenations of letters, special characters, numbers, and spaces</p></li>
-<li><p>they are case sensitive!</p></li>
-<li><p>strings can be <em>defined</em> by enclosing in quotation marks (”) or single quotes (‘).</p></li>
-</ul>
-<p>Examples:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">S</span> <span class="o">=</span> <span class="s1">&#39;Geneva&#39;</span>      <span class="c1"># make a 6-character string and assign it to a name</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">S</span> <span class="o">=</span> <span class="s2">&quot;Lausanne&quot;</span>    <span class="c1"># make a 8-character string and assign it to a name</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">S</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>        <span class="c1"># cast integer 3 to string and assign to name</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
-<span class="go">str</span>
-</pre></div>
-</div>
-</section>
-<section id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>ordered sequences of objects</p></li>
-<li><p>accessible by index</p></li>
-<li><p>have no <em>fixed size</em> and are very flexible</p></li>
-<li><p>a list is denoted by <em>square brackets</em> []</p></li>
-</ul>
-<p>Three examples:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">list2</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;abc&#39;</span><span class="p">]</span>                               <span class="c1"># lists can have mixed types; here int + str</span>
-<span class="n">list3</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;EPFL&#39;</span><span class="p">,</span><span class="s1">&#39;is&#39;</span><span class="p">,</span><span class="s1">&#39;in&#39;</span><span class="p">,[</span><span class="s1">&#39;Lausanne&#39;</span><span class="p">,</span><span class="s1">&#39;VD&#39;</span><span class="p">]]</span>    <span class="c1"># they support arbitrary nesting</span>
-</pre></div>
-</div>
-</section>
-<section id="dictionaries">
-<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this heading">#</a></h2>
-<p>Dictionaries are</p>
-<ul class="simple">
-<li><p>collections of key-value pairs that maps from keys to values.</p></li>
-<li><p>the keys can be any immutable type, and the values can be any type.</p></li>
-<li><p>like lists they can also be mixed and nested</p></li>
-<li><p>a dict is denoted by <em>curly brackets</em> {}</p></li>
-</ul>
-<p>An example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">inventory</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Apples&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Pears&#39;</span><span class="p">:</span> <span class="mf">123.5</span><span class="p">}</span>
-</pre></div>
-</div>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="git-and-github">
+<h1><span class="section-number">3. </span>Git and Github<a class="headerlink" href="#git-and-github" title="Permalink to this heading">#</a></h1>
+<p>Detailed information about git can be found in the lecture notes!</p>
+<p><object data="../week3/week3.pdf" type="application/pdf" width="100%" height="900px"></object></p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -551,20 +424,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="installation.html"
+       href="../notebooks/week_2_solutions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Visual Studio Code, Git and Anaconda</p>
+        <p class="prev-next-title">Python Introduction II - Data Types 2 and Numpy</p>
       </div>
     </a>
     <a class="right-next"
-       href="../notebooks/week_1.html"
+       href="week_3_git_cheatsheet.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python Introduction I - Programming Basics and Data Types</p>
+        <p class="prev-next-title">Git Cheat Sheet</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -574,24 +447,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-s-core-built-in-objects">Python’s core built-in objects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers-in-python">Numbers in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries">Dictionaries</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
