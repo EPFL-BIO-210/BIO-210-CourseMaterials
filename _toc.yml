@@ -27,3 +27,5 @@ parts:
       file: docs/week_3_git_cheatsheet.md
     - title: week 3 - notebook
       file: notebooks/week_3.ipynb
+    - title: week 3 - notebook with solutions
+      file: notebooks/week_3_solutions.ipynb
