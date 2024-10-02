@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/installation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Python Introduction I" href="week_1.html" />
+    <link rel="next" title="Details on weekly releases" href="release_notes.html" />
     <link rel="prev" title="Run Jupyter Notebooks with EPFL’s Noto" href="noto_guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -171,6 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="noto_guide.html">Run Jupyter Notebooks with EPFL’s Noto</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Visual Studio Code, Git and Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Details on weekly releases</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="week_1.html">1. Python Introduction I</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -185,10 +186,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="week_3.html">3. Git and Github</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="week_3_git_cheatsheet.html">Git cheatsheet</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=HkdAHXoRtos">Recommended tutorial on Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_3.html">week 3 - notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/week_3_solutions.html">week 3 - notebook with solutions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="week_4.html">4. Project introduction</a></li>
 </ul>
 
     </div>
@@ -448,17 +451,15 @@ document.write(`
 <li><p>Download the latest version and start the installer</p></li>
 <li><p>Follow the Git Setup wizard</p></li>
 <li><p>Open the windows command prompt (or Git Bash)</p></li>
-<li><p>Type: git –version   (to verify git is installed)</p></li>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code>   (to verify git is installed)</p></li>
 </ul>
 </section>
 <section id="mac">
 <h4>Mac<a class="headerlink" href="#mac" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Navigate to <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/git-2.23.0-intel-universal-mavericks.dmg/download">Git for Mac</a></p></li>
-<li><p>Download the latest version and start the installer</p></li>
-<li><p>Follow the instructions</p></li>
-<li><p>Open the command prompt “terminal”</p></li>
-<li><p>Type: git –version   (to verify git is installed)</p></li>
+<li><p>Open the command prompt “terminal”.</p></li>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">git</span></code>. If it is not installed, a pop-up window will appear asking you to install XCode, which includes git. Simply click on “Install” and follow the instructions. If <code class="docutils literal notranslate"><span class="pre">git</span></code> is already installed, you will see the git help message instead.</p></li>
+<li><p>Finally, type: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code>  (to verify git is installed)</p></li>
 </ul>
 </section>
 <section id="linux">
@@ -485,7 +486,7 @@ document.write(`
 <ul class="simple">
 <li><p>Follow the instructions of the following link: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">Anaconda for Windows</a></p></li>
 <li><p>Open anaconda prompt</p></li>
-<li><p>Type: python –version  (to verify python is installed)</p></li>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>  (to verify python is installed)</p></li>
 </ul>
 </section>
 <section id="id3">
@@ -493,7 +494,7 @@ document.write(`
 <ul class="simple">
 <li><p>Follow the instructions of the following link: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/mac-os/">Anaconda for Mac</a></p></li>
 <li><p>Open terminal</p></li>
-<li><p>Type: python –version   (to verify python is installed)</p></li>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>   (to verify python is installed)</p></li>
 </ul>
 </section>
 <section id="id4">
@@ -501,7 +502,7 @@ document.write(`
 <ul class="simple">
 <li><p>Follow the instructions of the following link: <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">Anaconda for Linux</a></p></li>
 <li><p>Open terminal</p></li>
-<li><p>Type: python –version  (to verify python is installed)</p></li>
+<li><p>Type: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>  (to verify python is installed)</p></li>
 </ul>
 </section>
 </section>
@@ -577,11 +578,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="week_1.html"
+       href="release_notes.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Python Introduction I</p>
+        <p class="prev-next-title">Details on weekly releases</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
