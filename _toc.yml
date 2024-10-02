@@ -6,6 +6,7 @@ parts:
 - chapters:
   - file: docs/noto_guide
   - file: docs/installation
+  - file: docs/release_notes
 - numbered: 1  # Only the second part is numbered
   chapters:
   chapters:
@@ -25,7 +26,10 @@ parts:
     sections:
     - title: Git cheatsheet
       file: docs/week_3_git_cheatsheet.md
+    - title: Recommended tutorial on Git
+      url: https://www.youtube.com/watch?v=HkdAHXoRtos
     - title: week 3 - notebook
       file: notebooks/week_3.ipynb
     - title: week 3 - notebook with solutions
       file: notebooks/week_3_solutions.ipynb
+  - file: docs/week_4
