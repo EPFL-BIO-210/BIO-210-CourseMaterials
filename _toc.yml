@@ -34,3 +34,8 @@ parts:
       file: notebooks/week_3_solutions.ipynb
   - file: docs/week_4
   - file: docs/week_5
+    sections:
+    - title: Git in VSCode tutorial (by Jennifer Shan)
+      url: https://www.youtube.com/watch?v=oepxj-e78PA
+    - title: BIO-210 survival kit (by Viva Berlenghi)
+      file: docs/week_5_git_manual.md
