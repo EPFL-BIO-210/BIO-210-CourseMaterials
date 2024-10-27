@@ -39,3 +39,4 @@ parts:
       url: https://www.youtube.com/watch?v=oepxj-e78PA
     - title: BIO-210 survival kit (by Viva Berlenghi)
       file: docs/week_5_git_manual.md
+  - file: docs/weeks_7
