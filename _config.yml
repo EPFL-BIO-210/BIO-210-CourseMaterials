@@ -1,0 +1,24 @@
+title: BIO-210
+author: A. Mathis, L. Stoffl, A. Marin Vargas, A. Chiappa, B. Borzyszkowski, H. Qi, M. Zhou, O. Ulrich, A. Saadat, S. Zhang, A. Bonnetto, S. Radoykova, A. Dominguez
+copyright: "2025"
+logo: docs/images/logo.png
+only_build_toc_files: true
+
+execute:
+  execute_notebooks: "off"
+
+html:
+  extra_navbar: ""
+  use_issues_button: true
+  use_repository_button: true
+  extra_footer: |
+    <div>Powered by <a href="https://jupyterbook.org/">Jupyter Book</a>.</div>
+
+repository:
+  url: https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials
+  path_to_book: docs
+  branch: main
+
+sphinx:
+  config:
+    html_extra_path: ["problem_sets", "docs/images"]
