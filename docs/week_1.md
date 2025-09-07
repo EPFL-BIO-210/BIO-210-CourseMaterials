@@ -89,3 +89,129 @@ An example:
 ```python
 inventory = {'Apples': 200, 'Pears': 123.5}
 ```
+
+
+## Debugging in Python - Finding and Fixing Errors
+
+**Bugs** are errors in your code that prevent it from working correctly. Learning to debug is essential for every programmer!
+
+### Types of Errors
+
+**Syntax Errors**: Your code doesn't follow Python's rules
+
+- Missing colons after `if` statements or loops
+- Unmatched parentheses or quotes
+- Python tells you exactly where the problem is
+
+**Runtime Errors**: Code crashes while running
+
+- Division by zero: `5 / 0`
+- Using wrong list index: `my_list[999]` when list only has 3 items
+- Converting invalid strings: `int("hello")`
+
+**Logic Errors**: Code runs but gives wrong results
+
+- Using `>` instead of `<` in a condition
+- Wrong formula in calculations
+- These are the trickiest to find!
+
+### Simple Debugging with print()
+
+The easiest way to debug is adding `print()` statements:
+
+```python
+# Check variable values
+x = 10
+y = 20
+print("x is:", x, "y is:", y)
+
+# Track where your code is
+print("About to start the loop")
+for i in range(3):
+    print("Loop step:", i)
+```
+
+### Reading Error Messages
+
+Python gives you helpful error messages - always read them carefully! They tell you:
+
+- What type of error occurred
+- Which line caused the problem
+- What Python expected to see
+
+### Interactive Debugging in Jupyter
+
+In Jupyter notebooks, you can use the interactive debugger:
+
+- `set_trace()` pauses your code so you can inspect variables
+- Type `n` + Enter to go to the next line
+- Type `q` + Enter to quit the debugger
+- Type any variable name to see its current value
+
+### Debugging Tips for Beginners
+
+1. **Start simple**: Test with basic examples first
+2. **Use print() liberally**: See what your variables contain
+3. **Read error messages**: They usually tell you exactly what's wrong
+4. **Test small pieces**: Don't debug a huge program all at once
+5. **Clean up**: Remove print statements when you're done
+
+> **Advanced Information: Python pdb Debugger**
+>
+> The Python Debugger (pdb) is a powerful command-line tool for advanced debugging:
+>
+> **Starting pdb:**
+>
+> ```python
+> # Modern way (Python 3.7+)
+> breakpoint()  # Simple and clean
+>
+> # Traditional way
+> import pdb
+> pdb.set_trace()  # Pauses execution here
+> ```
+>
+> **breakpoint() vs pdb.set_trace():**
+>
+> - `breakpoint()`: Built-in function (Python 3.7+), no imports needed, configurable
+> - `pdb.set_trace()`: Classic approach, works in all Python versions, requires import
+> - Both do the same thing: pause your code and start the debugger
+> - `breakpoint()` is preferred in modern Python code
+>
+> **Common pdb Commands:**
+>
+> - `n` (next): Execute next line
+> - `s` (step): Step into function calls
+> - `c` (continue): Continue execution
+> - `l` (list): Show current code
+> - `p variable_name`: Print variable value
+> - `pp variable_name`: Pretty-print variable
+> - `h` (help): Show all commands
+> - `q` (quit): Exit debugger
+>
+> **Advanced Features:**
+>
+> - Set breakpoints: `b line_number` or `b filename:line_number`
+> - Navigate call stack: `u` (up) and `d` (down)
+> - Execute Python code: Just type it in the pdb prompt
+> - Post-mortem debugging: `python -m pdb script.py`
+>
+> **When to use pdb:**
+>
+> - Complex logic errors that print() can't solve
+> - Need to examine variables at multiple points
+> - Working in environments without VS Code (see below)
+> - Debugging remote or production code
+
+Full documentation: [Python pdb debugger](https://docs.python.org/3/library/pdb.
+html) 
+
+### VS Code Debugger vs pdb
+
+Starting in class 3, we will use VS Code... so just as a pointer: 
+
+- **VS Code debugger**: Graphical interface with mouse clicks, great for beginners
+- **pdb**: Command-line debugger, works everywhere, more advanced
+- Both let you pause code, inspect variables, and step through line by line
+
+[VS Code debugging](https://code.visualstudio.com/docs/python/debugging)
