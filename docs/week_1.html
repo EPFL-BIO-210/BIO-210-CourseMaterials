@@ -65,7 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/week_1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Visual Studio Code, Git and Anaconda" href="installation.html" />
+    <link rel="next" title="2. Python Introduction I - Programming Basics and Data Types" href="../notebooks/week_1.html" />
+    <link rel="prev" title="Run Jupyter Notebooks with EPFL’s Noto" href="noto_guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -169,10 +170,11 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="noto_guide.html">Run Jupyter Notebooks with EPFL’s Noto</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Visual Studio Code, Git and Anaconda</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Python Introduction I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/week_1.html">2. Python Introduction I - Programming Basics and Data Types</a></li>
+
 </ul>
 
     </div>
@@ -373,6 +375,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries">Dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-in-python-finding-and-fixing-errors">Debugging in Python - Finding and Fixing Errors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-errors">Types of Errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-debugging-with-print">Simple Debugging with print()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-error-messages">Reading Error Messages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-debugging-in-jupyter">Interactive Debugging in Jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-tips-for-beginners">Debugging Tips for Beginners</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-debugger-vs-pdb">VS Code Debugger vs pdb</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -501,6 +512,132 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="debugging-in-python-finding-and-fixing-errors">
+<h2>Debugging in Python - Finding and Fixing Errors<a class="headerlink" href="#debugging-in-python-finding-and-fixing-errors" title="Permalink to this heading">#</a></h2>
+<p><strong>Bugs</strong> are errors in your code that prevent it from working correctly. Learning to debug is essential for every programmer!</p>
+<section id="types-of-errors">
+<h3>Types of Errors<a class="headerlink" href="#types-of-errors" title="Permalink to this heading">#</a></h3>
+<p><strong>Syntax Errors</strong>: Your code doesn’t follow Python’s rules</p>
+<ul class="simple">
+<li><p>Missing colons after <code class="docutils literal notranslate"><span class="pre">if</span></code> statements or loops</p></li>
+<li><p>Unmatched parentheses or quotes</p></li>
+<li><p>Python tells you exactly where the problem is</p></li>
+</ul>
+<p><strong>Runtime Errors</strong>: Code crashes while running</p>
+<ul class="simple">
+<li><p>Division by zero: <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">/</span> <span class="pre">0</span></code></p></li>
+<li><p>Using wrong list index: <code class="docutils literal notranslate"><span class="pre">my_list[999]</span></code> when list only has 3 items</p></li>
+<li><p>Converting invalid strings: <code class="docutils literal notranslate"><span class="pre">int(&quot;hello&quot;)</span></code></p></li>
+</ul>
+<p><strong>Logic Errors</strong>: Code runs but gives wrong results</p>
+<ul class="simple">
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> in a condition</p></li>
+<li><p>Wrong formula in calculations</p></li>
+<li><p>These are the trickiest to find!</p></li>
+</ul>
+</section>
+<section id="simple-debugging-with-print">
+<h3>Simple Debugging with print()<a class="headerlink" href="#simple-debugging-with-print" title="Permalink to this heading">#</a></h3>
+<p>The easiest way to debug is adding <code class="docutils literal notranslate"><span class="pre">print()</span></code> statements:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check variable values</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;y is:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Track where your code is</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;About to start the loop&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loop step:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="reading-error-messages">
+<h3>Reading Error Messages<a class="headerlink" href="#reading-error-messages" title="Permalink to this heading">#</a></h3>
+<p>Python gives you helpful error messages - always read them carefully! They tell you:</p>
+<ul class="simple">
+<li><p>What type of error occurred</p></li>
+<li><p>Which line caused the problem</p></li>
+<li><p>What Python expected to see</p></li>
+</ul>
+</section>
+<section id="interactive-debugging-in-jupyter">
+<h3>Interactive Debugging in Jupyter<a class="headerlink" href="#interactive-debugging-in-jupyter" title="Permalink to this heading">#</a></h3>
+<p>In Jupyter notebooks, you can use the interactive debugger:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_trace()</span></code> pauses your code so you can inspect variables</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">n</span></code> + Enter to go to the next line</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">q</span></code> + Enter to quit the debugger</p></li>
+<li><p>Type any variable name to see its current value</p></li>
+</ul>
+</section>
+<section id="debugging-tips-for-beginners">
+<h3>Debugging Tips for Beginners<a class="headerlink" href="#debugging-tips-for-beginners" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Start simple</strong>: Test with basic examples first</p></li>
+<li><p><strong>Use print() liberally</strong>: See what your variables contain</p></li>
+<li><p><strong>Read error messages</strong>: They usually tell you exactly what’s wrong</p></li>
+<li><p><strong>Test small pieces</strong>: Don’t debug a huge program all at once</p></li>
+<li><p><strong>Clean up</strong>: Remove print statements when you’re done</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Advanced Information: Python pdb Debugger</strong></p>
+<p>The Python Debugger (pdb) is a powerful command-line tool for advanced debugging:</p>
+<p><strong>Starting pdb:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modern way (Python 3.7+)</span>
+<span class="nb">breakpoint</span><span class="p">()</span>  <span class="c1"># Simple and clean</span>
+
+<span class="c1"># Traditional way</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pdb</span>
+<span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>  <span class="c1"># Pauses execution here</span>
+</pre></div>
+</div>
+<p><strong>breakpoint() vs pdb.set_trace():</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code>: Built-in function (Python 3.7+), no imports needed, configurable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdb.set_trace()</span></code>: Classic approach, works in all Python versions, requires import</p></li>
+<li><p>Both do the same thing: pause your code and start the debugger</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> is preferred in modern Python code</p></li>
+</ul>
+<p><strong>Common pdb Commands:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> (next): Execute next line</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> (step): Step into function calls</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> (continue): Continue execution</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">l</span></code> (list): Show current code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">variable_name</span></code>: Print variable value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pp</span> <span class="pre">variable_name</span></code>: Pretty-print variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> (help): Show all commands</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> (quit): Exit debugger</p></li>
+</ul>
+<p><strong>Advanced Features:</strong></p>
+<ul class="simple">
+<li><p>Set breakpoints: <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">line_number</span></code> or <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">filename:line_number</span></code></p></li>
+<li><p>Navigate call stack: <code class="docutils literal notranslate"><span class="pre">u</span></code> (up) and <code class="docutils literal notranslate"><span class="pre">d</span></code> (down)</p></li>
+<li><p>Execute Python code: Just type it in the pdb prompt</p></li>
+<li><p>Post-mortem debugging: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pdb</span> <span class="pre">script.py</span></code></p></li>
+</ul>
+<p><strong>When to use pdb:</strong></p>
+<ul class="simple">
+<li><p>Complex logic errors that print() can’t solve</p></li>
+<li><p>Need to examine variables at multiple points</p></li>
+<li><p>Working in environments without VS Code (see below)</p></li>
+<li><p>Debugging remote or production code</p></li>
+</ul>
+</div></blockquote>
+<p>Full documentation: [Python pdb debugger](<a class="reference external" href="https://docs.python.org/3/library/pdb">https://docs.python.org/3/library/pdb</a>.
+html)</p>
+</section>
+<section id="vs-code-debugger-vs-pdb">
+<h3>VS Code Debugger vs pdb<a class="headerlink" href="#vs-code-debugger-vs-pdb" title="Permalink to this heading">#</a></h3>
+<p>Starting in class 3, we will use VS Code… so just as a pointer:</p>
+<ul class="simple">
+<li><p><strong>VS Code debugger</strong>: Graphical interface with mouse clicks, great for beginners</p></li>
+<li><p><strong>pdb</strong>: Command-line debugger, works everywhere, more advanced</p></li>
+<li><p>Both let you pause code, inspect variables, and step through line by line</p></li>
+</ul>
+<p><a class="reference external" href="https://code.visualstudio.com/docs/python/debugging">VS Code debugging</a></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -534,13 +671,22 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="installation.html"
+       href="noto_guide.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Visual Studio Code, Git and Anaconda</p>
+        <p class="prev-next-title">Run Jupyter Notebooks with EPFL’s Noto</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../notebooks/week_1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Python Introduction I - Programming Basics and Data Types</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -562,6 +708,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings">Strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries">Dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-in-python-finding-and-fixing-errors">Debugging in Python - Finding and Fixing Errors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-errors">Types of Errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-debugging-with-print">Simple Debugging with print()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-error-messages">Reading Error Messages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-debugging-in-jupyter">Interactive Debugging in Jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-tips-for-beginners">Debugging Tips for Beginners</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-debugger-vs-pdb">VS Code Debugger vs pdb</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -576,7 +731,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By A. Mathis, L. Stoffl, A. Marin Vargas, A. Chiappa, B. Borzyszkowski, H. Qi, M. Zhou, O. Ulrich, A. Saadat, S. Zhang, A. Bonnetto, S. Radoykova, A. Dominguez
+By A. Mathis, L. Stoffl, A. Marin Vargas, A. Chiappa, B. Borzyszkowski, H. Qi, M. Zhou, O. Ulrich, A. Saadat, S. Zhang, C. Li
 </p>
 
   </div>
