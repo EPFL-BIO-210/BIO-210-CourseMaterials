@@ -203,12 +203,11 @@ In Jupyter notebooks, you can use the interactive debugger:
 > - Working in environments without VS Code (see below)
 > - Debugging remote or production code
 
-Full documentation: [Python pdb debugger](https://docs.python.org/3/library/pdb.
-html) 
+Full documentation: [Python pdb debugger](https://docs.python.org/3/library/pdb.html)
 
 ### VS Code Debugger vs pdb
 
-Starting in class 3, we will use VS Code... so just as a pointer: 
+Starting in class 3, we will use VS Code... so just as a pointer:
 
 - **VS Code debugger**: Graphical interface with mouse clicks, great for beginners
 - **pdb**: Command-line debugger, works everywhere, more advanced
