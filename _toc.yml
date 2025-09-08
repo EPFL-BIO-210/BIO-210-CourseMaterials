@@ -11,3 +11,4 @@ parts:
     sections:
     - title: week 1 - notebook
       file: notebooks/week_1
+      file: notebooks/week_1_solutions
