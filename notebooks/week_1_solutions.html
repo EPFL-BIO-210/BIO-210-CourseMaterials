@@ -62,7 +62,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/week_1_solutions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="1. Python Introduction I" href="../docs/week_1.html" />
@@ -247,7 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fnotebooks/week_1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fnotebooks/week_1_solutions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/notebooks/week_1.ipynb" target="_blank"
+      <li><a href="../_sources/notebooks/week_1_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -371,10 +371,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-epfl-s-noto-platform">Using EPFL’s Noto Platform</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types-fundamentals">Data types - Fundamentals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-and-ifs">Loops and ifs</a></li>
@@ -407,32 +404,6 @@ document.write(`
 <p>Welcome to the course “<strong>Applied software engineering for life sciences</strong>”! During this semester you will learn how to use the programming language <strong>Python</strong> to develop a medium-sized project. The first 4 exercise sessions, including this one, will focus on teaching you the fundamentals of Python, git and VS code. Then the project phase will start!</p>
 <p>This page (that you see right now) is called a <strong>Notebook</strong>. It is a convenient development tool, as it allows you to run your code in blocks (called <strong>cells</strong>) and immediately visualize the output. Furthermore, the variables defined in a cell are stored in memory and are readily available in all other cells. In the cell below, we are performing the operation 3 + 4. To execute it and visualize the result, just select the cell with your mouse (or moving down with an arrow) and press the <strong>play</strong> button in the command bar at the top of this page. Alternatively, you can use the shortcut [ctrl] + [enter] to run the cell ([shift] + [enter] to run the cell and move to the next one).</p>
 <p>Specifically, this <strong>Notebook</strong> is a <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a> a web application for creating and sharing computational documents.</p>
-<section id="using-epfl-s-noto-platform">
-<h2>Using EPFL’s Noto Platform<a class="headerlink" href="#using-epfl-s-noto-platform" title="Permalink to this heading">#</a></h2>
-<p><strong>What is Noto?</strong></p>
-<p>Noto is EPFL’s centralized JupyterLab platform that allows teachers and students to use Jupyter Notebooks online without having to install anything on their computer.</p>
-<p><strong>How to access Noto:</strong></p>
-<ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://noto.epfl.ch">https://noto.epfl.ch</a></p></li>
-<li><p>Log in with your Gaspar credentials</p></li>
-</ol>
-<p><strong>How to run Jupyter Notebooks with Noto:</strong></p>
-<ol class="arabic simple">
-<li><p>Once logged into Noto, press the blue button in the top left corner to open the launcher</p></li>
-<li><p>Open a terminal by selecting the appropriate icon in the launcher</p></li>
-<li><p>Navigate to the folder where you want to download the course materials</p></li>
-<li><p>Clone the repository: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials.git</span></code></p></li>
-<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> directory and open the Jupyter Notebook of your choice</p></li>
-</ol>
-<p><strong>How to download the latest materials:</strong></p>
-<p>If you’ve already cloned the repository and want to update to the latest version:</p>
-<ol class="arabic simple">
-<li><p>Open a terminal in Noto</p></li>
-<li><p>Navigate to the root folder of “BIO-210-CourseMaterials”</p></li>
-<li><p>Run: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p></li>
-</ol>
-<p><em>Note: If you get an error with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>, rename your current week’s notebook file and try again. This will be explained in detail during our git lessons!</em></p>
-</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="table-of-contents">
 <h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h1>
@@ -457,6 +428,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
 </div>
 <p>If you ran the cell correctly, you should see the output “7” appearing below your cell.</p>
 <p>Now you are ready to create your first cell. A cell can be of 3 types: <strong>Code</strong>, <strong>Markdown</strong> or <strong>Raw</strong>. To create a new cell, just press the “+” button in the command bar. Alternatively, select a cell (the cell, not its content!) and press the key “b” or “a” to create a cell below or above. By default, the cell is created in Code mode. This means that you can right away write your code and run it. You can switch mode by selecting it in the command bar, or with the shortcuts “m” for Markdown, “r” for Raw and “y” for code.</p>
@@ -472,6 +448,12 @@ document.write(`
 
 <span class="n">x</span> <span class="o">=</span> <span class="mf">1.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = 1., type of x: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 1, type of x:  &lt;class &#39;int&#39;&gt;
+x = 1., type of x:  &lt;class &#39;float&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -499,6 +481,16 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 3 + 4, result:  7  type of x:  &lt;class &#39;int&#39;&gt;
+x = 3. + 4., result:  7.0  type of x:  &lt;class &#39;float&#39;&gt;
+x = 6 / 4, result:  1.5  type of x:  &lt;class &#39;float&#39;&gt;
+x = 7. // 2, result:  3.0  type of x:  &lt;class &#39;float&#39;&gt;
+x = 4 ** 3, result:  64  type of x:  &lt;class &#39;int&#39;&gt;
+x = 22.5 % 3, result:  1.5  type of x:  &lt;class &#39;float&#39;&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Besides integers and floats, Python supports two other fundamental data types: <strong>booleans</strong> and <strong>strings</strong>. Booleans can just store the values “True” or “False”, while strings are a more complex type, which can store characters, words and sentences (comprising lots of different characters). Here are some examples:</p>
 <div class="cell docutils container">
@@ -511,6 +503,13 @@ document.write(`
 
 <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;abdc efgh&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = &#39;abcd efgh&#39;, type of x: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = False, type of x:  &lt;class &#39;bool&#39;&gt;
+x = &#39;a&#39;, type of x:  &lt;class &#39;str&#39;&gt;
+x = &#39;abcd efgh&#39;, type of x:  &lt;class &#39;str&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -537,11 +536,37 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = int(7.5), result:  7  type of x:  &lt;class &#39;int&#39;&gt;
+x = float(3), result:  3.0  type of x:  &lt;class &#39;float&#39;&gt;
+x = str(3.18), result:  3.18  type of x:  &lt;class &#39;str&#39;&gt;
+x = int(False), result:  0  type of x:  &lt;class &#39;int&#39;&gt;
+x = bool(234), result:  True  type of x:  &lt;class &#39;bool&#39;&gt;
+</pre></div>
 </div>
-<p>The last expression int(“ab”) triggered what is called an <strong>exception</strong>. This means that the function <code>int()</code> received an “exceptional” input, which it cannot interpret as an integer. In such cases the default exception is “ValueError”. Some strings, ones that represent numbers, can be interpreted as an integer. In the cell below, try to convert a suitable string to an integer without causing any exception!</p>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">16</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">234</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = bool(234), result: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; type of x: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="ne">---&gt; </span><span class="mi">16</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;ab&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The last expression int(“ab”) triggered what is called an <strong>exception</strong>. This means that the function <code>int()</code> received an “exceptional” input, which it cannot interpret as an integer. In such cases the default exception is “ValueError”. In the cell below, try to convert a string to an integer without causing any exception!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;345&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>345
 </pre></div>
 </div>
 </div>
@@ -551,6 +576,18 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">s_1</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">s_2</span> <span class="o">=</span> <span class="s2">&quot;th&quot;</span>
+<span class="n">s_3</span> <span class="o">=</span> <span class="s2">&quot;tuna&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s_2</span><span class="si">}</span><span class="s2"> is in </span><span class="si">{</span><span class="n">s_1</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">,</span>  <span class="n">s_2</span> <span class="ow">in</span> <span class="n">s_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s_3</span><span class="si">}</span><span class="s2"> is in </span><span class="si">{</span><span class="n">s_1</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">,</span> <span class="n">s_3</span> <span class="ow">in</span> <span class="n">s_1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>th is in Python: True
+tuna is in Python: False
 </pre></div>
 </div>
 </div>
@@ -559,6 +596,14 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;abracadabra&quot;</span>
+<span class="n">s_u</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s_u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ubrucudubru
 </pre></div>
 </div>
 </div>
@@ -567,6 +612,13 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;if you sum 3 and 4 you obtain </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>if you sum 3 and 4 you obtain 7
 </pre></div>
 </div>
 </div>
@@ -576,6 +628,11 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;if you sum 3 and 4 you obtain </span><span class="si">{</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>if you sum 3 and 4 you obtain 7
 </pre></div>
 </div>
 </div>
@@ -594,11 +651,39 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
 </pre></div>
 </div>
 </div>
@@ -613,6 +698,17 @@ document.write(`
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loop finished&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+Breaking at 5
+Loop finished
 </pre></div>
 </div>
 </div>
@@ -641,11 +737,27 @@ To understand what that means, we need to have a look on <strong>generators</str
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rome
+</pre></div>
 </div>
-<p><strong>Exercise 4</strong>: write some code which, given an integer, prints whether it is even or odd</p>
+</div>
+</div>
+<p><strong>Exercise 4</strong>: write some code which, given an integer, prints whether it is even or odd (hint: if you want to let a user input a number, check out the lecture slides on how to do it)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">a_int</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">if</span> <span class="n">a_int</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a_int</span><span class="si">}</span><span class="s2"> is even&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a_int</span><span class="si">}</span><span class="s2"> is odd&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 is even
 </pre></div>
 </div>
 </div>
@@ -654,6 +766,18 @@ To understand what that means, we need to have a look on <strong>generators</str
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">int_1</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="n">int_2</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="k">if</span> <span class="n">int_1</span> <span class="o">%</span> <span class="n">int_2</span><span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">int_2</span><span class="si">}</span><span class="s2"> is a divisor of </span><span class="si">{</span><span class="n">int_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">int_2</span><span class="si">}</span><span class="s2"> is not a divisor of </span><span class="si">{</span><span class="n">int_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15 is a divisor of 45
 </pre></div>
 </div>
 </div>
@@ -662,6 +786,20 @@ To understand what that means, we need to have a look on <strong>generators</str
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">string_1</span> <span class="o">=</span> <span class="s2">&quot;la&quot;</span>
+<span class="n">string_2</span> <span class="o">=</span> <span class="s2">&quot;uhlala&quot;</span>
+
+<span class="k">if</span> <span class="n">string_1</span> <span class="ow">in</span> <span class="n">string_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">string_2</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">string_2</span> <span class="ow">in</span> <span class="n">string_1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">string_1</span> <span class="o">+</span> <span class="n">string_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>uhlala
 </pre></div>
 </div>
 </div>
@@ -674,7 +812,7 @@ To understand what that means, we need to have a look on <strong>generators</str
 <p><a id="lists"></a></p>
 <section id="lists">
 <h3>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h3>
-<p>Lists are ordered collections of values. The elements of a list can be of any type. You can retrieve an element of a list through its index (starting from 0!). There are many ways to create lists. You can generate a list directly defining its elements or by passing an iterable object (an object you can go through with a for loop) to the function <code>list()</code>.</p>
+<p>Lists are ordered collections of values. The elements of a list can be of any type. You can retrieve an element of a list through its index (starting from 0!). There are many ways to create lists. You can generate a list directly defining its elements or by passing an iterable object (an object you can go thourgh with a for loop) to the function <code>list()</code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
@@ -685,6 +823,13 @@ To understand what that means, we need to have a look on <strong>generators</str
 
 <span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List including the 10 digits: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = [1, 3, 5, 6] , type of x:  &lt;class &#39;list&#39;&gt;
+The element of the list in position 2 is 5
+List including the 10 digits:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 </pre></div>
 </div>
 </div>
@@ -703,6 +848,13 @@ To understand what that means, we need to have a look on <strong>generators</str
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Base list:  [1, 4, 6]
+After appending 8:  [1, 4, 6, 8]
+And after extending it by [3, 5]:  [1, 4, 6, 8, 3, 5]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Lists can be conveniently looped through with a for statement. Besides the standard syntax, they also support what is called the <strong>list comprehension</strong> syntax, which you can use, for example, to generate a new list starting from an existing one, or from a generator.</p>
 <div class="cell docutils container">
@@ -716,6 +868,11 @@ To understand what that means, we need to have a look on <strong>generators</str
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 25, 36]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -725,12 +882,26 @@ To understand what that means, we need to have a look on <strong>generators</str
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 9, 25, 36]
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>Exercise 7</strong>. Print the last two elements of the French-speaking cities in the following nested list and then remove the element that does not represent a city of Switzerland.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;Lausanne&quot;</span><span class="p">,</span> <span class="s2">&quot;Geneva&quot;</span><span class="p">,</span> <span class="s2">&quot;Sion&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Bern&quot;</span><span class="p">,</span> <span class="s2">&quot;Basel&quot;</span><span class="p">,</span> <span class="s2">&quot;Zürich&quot;</span><span class="p">],</span> <span class="s2">&quot;Auckland&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Lugano&quot;</span><span class="p">]]</span>
 <span class="c1">### Insert your code here</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cities</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Geneva&#39;, &#39;Sion&#39;]
+[[&#39;Lausanne&#39;, &#39;Geneva&#39;, &#39;Sion&#39;], [&#39;Bern&#39;, &#39;Basel&#39;, &#39;Zürich&#39;], [&#39;Lugano&#39;]]
 </pre></div>
 </div>
 </div>
@@ -740,6 +911,24 @@ To understand what that means, we need to have a look on <strong>generators</str
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
 <span class="c1">### Insert your code here</span>
+<span class="n">list_sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">list_len</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">list_sum</span> <span class="o">+=</span> <span class="n">el</span>
+    <span class="n">list_len</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">list_sum</span> <span class="o">/</span> <span class="n">list_len</span>
+<span class="n">var</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="n">var</span> <span class="o">+=</span> <span class="p">(</span><span class="n">el</span><span class="o">-</span><span class="n">mean</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">var</span> <span class="o">/=</span> <span class="n">list_len</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mean:&#39;</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;variance:&#39;</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mean: 14.2
+variance: 169.36
 </pre></div>
 </div>
 </div>
@@ -764,6 +953,12 @@ To understand what that means, we need to have a look on <strong>generators</str
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Animal to sound: {&#39;dog&#39;: &#39;woof&#39;, &#39;cat&#39;: &#39;meow&#39;, &#39;pig&#39;: &#39;oink&#39;, &#39;cow&#39;: &#39;moo&#39;}
+The same dict, but defined in another way:  {&#39;dog&#39;: &#39;woof&#39;, &#39;cat&#39;: &#39;meow&#39;, &#39;pig&#39;: &#39;oink&#39;, &#39;cow&#39;: &#39;moo&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <p>Accessing the values stored in a dictionary can be done by key (through the function .get() or through square brackets):</p>
 <div class="cell docutils container">
@@ -773,6 +968,12 @@ To understand what that means, we need to have a look on <strong>generators</str
 
 <span class="n">sound</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cow&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The cow&#39;s call is&quot;</span><span class="p">,</span> <span class="n">sound</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The dog&#39;s call is woof
+The cow&#39;s call is moo
 </pre></div>
 </div>
 </div>
@@ -786,12 +987,22 @@ To understand what that means, we need to have a look on <strong>generators</str
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;dog&#39;: &#39;woof&#39;, &#39;cat&#39;: &#39;meow&#39;, &#39;pig&#39;: &#39;oink&#39;, &#39;cow&#39;: &#39;moo&#39;, &#39;donkey&#39;: &#39;hee-haw&#39;, &#39;owl&#39;: &#39;hoot&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <p>You can access the keys of your dictionary with the function <code>keys()</code> which returns a dict_keys object. For simplicity, you can convert this object in a list using the function <code>list()</code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keyset</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The keys in the dictionary are: &quot;</span><span class="p">,</span> <span class="n">keyset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The keys in the dictionary are:  [&#39;dog&#39;, &#39;cat&#39;, &#39;pig&#39;, &#39;cow&#39;, &#39;donkey&#39;, &#39;owl&#39;]
 </pre></div>
 </div>
 </div>
@@ -810,12 +1021,45 @@ To understand what that means, we need to have a look on <strong>generators</str
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The iteration variable is:  dog
+And I can use it to access the value:  woof
+The iteration variable is:  cat
+And I can use it to access the value:  meow
+The iteration variable is:  pig
+And I can use it to access the value:  oink
+The iteration variable is:  cow
+And I can use it to access the value:  moo
+The iteration variable is:  donkey
+And I can use it to access the value:  hee-haw
+The iteration variable is:  owl
+And I can use it to access the value:  hoot
+
+But I can also access the key and the value together
+key: dog, value: woof
+key: cat, value: meow
+key: pig, value: oink
+key: cow, value: moo
+key: donkey, value: hee-haw
+key: owl, value: hoot
+</pre></div>
+</div>
+</div>
 </div>
 <p>Important! Dictionaries are not ordered collections, so it is not possible to get their elements by index.</p>
 <p><strong>Exercise 9</strong>. Create a dictionary where the keys are numbers between 1 and 10 (both included) and the values are the square of the keys.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
+<span class="n">mydict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="n">mydict</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mydict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
 </pre></div>
 </div>
 </div>
@@ -858,6 +1102,18 @@ Python tells you exactly what’s wrong and where - read the error message caref
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Step 0: adding 1, total so far: 0
+&gt; <span class=" -Color -Color-Green">/var/folders/ny/msc8c0bj3b107h6d41sh96940000gn/T/ipykernel_78039/1102150307.py</span>(7)<span class=" -Color -Color-Cyan">&lt;module&gt;</span><span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Green">      5 </span>total <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span>
+<span class=" -Color -Color-Green">      6 </span>
+<span class=" -Color -Color-Green">----&gt; 7 for</span> i<span class=" -Color -Color-Blue">,</span> num <span class=" -Color -Color-Green">in</span> enumerate<span class=" -Color -Color-Blue">(</span>numbers<span class=" -Color -Color-Blue">):</span>
+<span class=" -Color -Color-Green">      8 </span><span class=" -Color -Color-Red">    </span>print<span class=" -Color -Color-Blue">(f&quot;Step {i}: adding {num}, total so far: {total}&quot;)</span>
+<span class=" -Color -Color-Green">      9 </span><span class=" -Color -Color-Red">    </span>total <span class=" -Color -Color-Blue">+=</span> num
+
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>When the debugger pauses:</strong></p>
 <ul class="simple">
@@ -887,6 +1143,28 @@ Python tells you exactly what’s wrong and where - read the error message caref
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original</span> <span class="o">=</span> <span class="s2">&quot;ATGCGATCG&quot;</span>
 <span class="n">mutated</span> <span class="o">=</span> <span class="s2">&quot;ATGCAGATCG&quot;</span>
 <span class="c1">### Insert your code here</span>
+
+<span class="c1"># Check if sequences are identical</span>
+<span class="k">if</span> <span class="n">original</span> <span class="o">==</span> <span class="n">mutated</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="c1"># Find first position where sequences differ</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">original</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mutated</span><span class="p">)</span> <span class="ow">or</span> <span class="n">original</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">mutated</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">break</span>
+    
+    <span class="c1"># If we reached the end without finding differences, divergence is at end</span>
+    <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">original</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Divergence starts at position: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Divergence starts at position: 4
 </pre></div>
 </div>
 </div>
@@ -902,10 +1180,87 @@ Python tells you exactly what’s wrong and where - read the error message caref
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_number</span> <span class="o">=</span> <span class="mi">9875</span>  <span class="c1"># Find digital root and steps for this</span>
-<span class="n">target_root</span> <span class="o">=</span> <span class="mi">7</span>     <span class="c1"># Find the SMALLEST number that reaches this root</span>
-<span class="n">target_steps</span> <span class="o">=</span> <span class="mi">2</span>    <span class="c1"># in exactly this many steps</span>
+<span class="n">target_root</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># Find the SMALLEST number that reaches this root</span>
+<span class="n">target_steps</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># in exactly this many steps</span>
 
 <span class="c1">### Insert your code here</span>
+
+<span class="c1"># Part 1: Calculate digital root and steps for test_number</span>
+<span class="n">number</span> <span class="o">=</span> <span class="n">test_number</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting with </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">number</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">steps</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">digit_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">number</span>
+    <span class="k">while</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">digit_sum</span> <span class="o">+=</span> <span class="n">temp</span> <span class="o">%</span> <span class="mi">10</span>
+        <span class="n">temp</span> <span class="o">//=</span> <span class="mi">10</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Step </span><span class="si">{</span><span class="n">steps</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">digit_sum</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">digit_sum</span>
+
+<span class="n">digital_root</span> <span class="o">=</span> <span class="n">number</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Digital root: </span><span class="si">{</span><span class="n">digital_root</span><span class="si">}</span><span class="s2">, reached in </span><span class="si">{</span><span class="n">steps</span><span class="si">}</span><span class="s2"> steps</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Alternative method using strings:</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_number</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span> <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="n">number</span><span class="p">]</span>
+    <span class="n">test_sum</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_sum</span><span class="p">)</span>
+    <span class="n">steps</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+
+<span class="c1"># Part 2: Find the SMALLEST number that reaches target_root in target_steps</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Finding the smallest three-digit number that reaches </span><span class="si">{</span><span class="n">target_root</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">target_steps</span><span class="si">}</span><span class="s2"> steps:&quot;</span>
+<span class="p">)</span>
+
+<span class="n">candidate</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Start from smallest 3-digit number</span>
+<span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">found</span> <span class="ow">and</span> <span class="n">candidate</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="n">current</span> <span class="o">=</span> <span class="n">candidate</span>
+    <span class="n">current_steps</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">current</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">current_steps</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">digit_sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">current</span>
+        <span class="k">while</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">digit_sum</span> <span class="o">+=</span> <span class="n">temp</span> <span class="o">%</span> <span class="mi">10</span>
+            <span class="n">temp</span> <span class="o">//=</span> <span class="mi">10</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">digit_sum</span>
+
+        <span class="k">if</span> <span class="n">current_steps</span> <span class="o">==</span> <span class="n">target_steps</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="k">if</span> <span class="n">current</span> <span class="o">==</span> <span class="n">target_root</span> <span class="ow">and</span> <span class="n">current_steps</span> <span class="o">==</span> <span class="n">target_steps</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Smallest number found: </span><span class="si">{</span><span class="n">candidate</span><span class="si">}</span><span class="s2"> reaches </span><span class="si">{</span><span class="n">target_root</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">target_steps</span><span class="si">}</span><span class="s2"> steps&quot;</span>
+        <span class="p">)</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">candidate</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No such three-digit number found.&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting with 9875
+Step 1: 9875 → 29
+Step 2: 29 → 11
+Step 3: 11 → 2
+Digital root: 2, reached in 3 steps
+
+2
+3
+Finding the smallest three-digit number that reaches 7 in 2 steps:
+Smallest number found: 169 reaches 7 in 2 steps
 </pre></div>
 </div>
 </div>
@@ -968,10 +1323,7 @@ Python tells you exactly what’s wrong and where - read the error message caref
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-epfl-s-noto-platform">Using EPFL’s Noto Platform</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types-fundamentals">Data types - Fundamentals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-and-ifs">Loops and ifs</a></li>
