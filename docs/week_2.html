@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Python Introduction II &#8212; BIO-210</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/week_2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python Introduction II - Data Types 2 and Numpy" href="../notebooks/week_2.html" />
+    <link rel="prev" title="Python Introduction I - Programming Basics and Data Types" href="../notebooks/week_1_solutions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="BIO-210 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="BIO-210 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Welcome to BIO-210
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="noto_guide.html">Run Jupyter Notebooks with EPFL’s Noto</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="week_1.html">1. Python Introduction I</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/week_1.html">Python Introduction I - Programming Basics and Data Types</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/week_1_solutions.html">Python Introduction I - Programming Basics and Data Types</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Python Introduction II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/week_2.html">week 2 - notebook</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials/issues/new?title=Issue%20on%20page%20%2Fdocs/week_2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/week_2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Introduction II</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-if-variants">Control flow: If variants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-while-statements">Control flow: while statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-control-break-statements">Additional control: break statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-python-s-foundation-of-scientific-computing">NumPy: Python’s foundation of scientific computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-introduction-ii">
+<h1><span class="section-number">2. </span>Python Introduction II<a class="headerlink" href="#python-introduction-ii" title="Permalink to this heading">#</a></h1>
+<section id="tuples">
+<h2>Tuples<a class="headerlink" href="#tuples" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>ordered sequences of objects that <em>cannot</em> be changed (immutable)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">T</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>     <span class="c1"># a 4-item tuple</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">T</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>         <span class="c1"># concatenation</span>
+<span class="go">(0,1,2,3,5,6)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>              <span class="c1"># slicing</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span>
+<span class="gp">... </span><span class="n">error</span> <span class="o">...</span>
+<span class="go">TypeError: &#39;tuple&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+<p>Why tuples? Their immutability is the point; they are used for control…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>       <span class="c1"># here we define two variables in one line</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="go">(3,4)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>     <span class="c1"># convenient way to swap values!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="go">(4,3)</span>
+</pre></div>
+</div>
+</section>
+<section id="sets">
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>unordered collection of unique and immutable objects</p></li>
+</ul>
+<p>Example definitions and operations:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;bdxyz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">{&#39;c&#39;, &#39;e&#39;, &#39;d&#39;, &#39;a&#39;, &#39;b&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span>               <span class="c1"># difference set</span>
+<span class="go">{&#39;a&#39;, &#39;c&#39;, &#39;e&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">|</span> <span class="n">y</span>               <span class="c1"># union</span>
+<span class="go">{&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">x</span>            <span class="c1"># membership in sets</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</section>
+<section id="control-flow-if-variants">
+<h2>Control flow: If variants<a class="headerlink" href="#control-flow-if-variants" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>   <span class="c1"># else is not required!</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="k">elif</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="k">elif</span> <span class="o">...</span><span class="p">:</span> <span class="c1"># as many else if as you want!</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+  <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="control-flow-while-statements">
+<h2>Control flow: while statements<a class="headerlink" href="#control-flow-while-statements" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>    <span class="c1"># while condition is true, carry out indented expr.; then expr._post</span>
+    <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+
+<span class="o">&lt;</span><span class="n">expression_post</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<!--
+This code will:
+- Check `condition`, if true:
+- If True, run all `expressions` inside the code block
+- Check `condition` again and
+- repeat until `condition` is False, then it runs `expression_post`
+-->
+</section>
+<hr class="docutils" />
+<section id="additional-control-break-statements">
+<h2>Additional control: break statements<a class="headerlink" href="#additional-control-break-statements" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>immediately exits the <em>current</em> loop</p></li>
+<li><p>thus, skips remaining expressions in this loop</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+    <span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
+      <span class="k">break</span>           <span class="c1"># exits while loop!</span>
+    <span class="o">&lt;</span><span class="n">expression</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+
+<span class="o">&lt;</span><span class="n">expression_post</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="numpy-python-s-foundation-of-scientific-computing">
+<h2>NumPy: Python’s foundation of scientific computing<a class="headerlink" href="#numpy-python-s-foundation-of-scientific-computing" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://numpy.org/doc/stable/user/whatisnumpy.html">NumPy</a> is a fundamental package that</p>
+<ul class="simple">
+<li><p>provides multidimensional array objects (e.g. matrix of shape (M x N), but also vectors of shape (N) and tensors of shape (M_1 x M_2 x M_3 … x M_N))</p></li>
+<li><p>with various derived objects and powerful mathematical functions</p></li>
+</ul>
+<p>Numpy arrays, the ndarray object:</p>
+<ul class="simple">
+<li><p>NumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically).</p></li>
+<li><p>changing the size of an ndarray will create a new array and delete the original.</p></li>
+<li><p>arrays can have any dimensionality</p></li>
+<li><p>arrays contain numbers of the <em>same</em> type (e.g. floats, complex numbers, booleans)</p></li>
+<li><p>arrays are sequential objects and can be indexed by the <code class="docutils literal notranslate"><span class="pre">[]</span></code> operator</p></li>
+</ul>
+</section>
+<section id="slicing">
+<h2>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Slicing means getting a subset of ordered objects such as lists, tuples, Numpy arrays, …</p></li>
+<li><p>Slicing syntax is as follow: <code class="docutils literal notranslate"><span class="pre">[start:stop:step]</span></code></p></li>
+<li><p>If the object has more than one dimension, the syntax gets repeated for all dimensions separated with <code class="docutils literal notranslate"><span class="pre">,</span></code> (For example, for 2D Numpy arrays the syntax is <code class="docutils literal notranslate"><span class="pre">[start:stop:step,</span> <span class="pre">start:stop:step]</span></code> )</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">start</span></code> is not specified, it means from index 0 (first element)</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">stop</span></code> is not specified, it means until the last element</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">step</span></code> is not specified, it means <code class="docutils literal notranslate"><span class="pre">step=1</span></code></p></li>
+<li><p>Here are some examples of slicing:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>     <span class="c1"># a 4-item list</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>              <span class="c1"># slicing to get the first two elements</span>
+<span class="go">[0,1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>               <span class="c1"># if we do not specify the start, it is considered 0</span>
+<span class="go">[0,1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>               <span class="c1"># start=0, stop=4, step=2</span>
+<span class="go">[0,2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>               <span class="c1"># start=0, stop=4, step=2 (same as previous line)</span>
+<span class="go">[0,2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>               <span class="c1"># start=0, stop=4, step=-1 (negative steps reverse the order of object)</span>
+<span class="go">[3, 2, 1, 0]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Here are some examples with Numpy arrays:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+<span class="go">		[[0, 1, 2],</span>
+<span class="go">                  [3, 4, 5],</span>
+<span class="go">                  [6, 7, 8]])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>        <span class="c1"># for rows: start=0, stop=2, step=1 (i.e. first two rows)</span>
+<span class="go">array([[0, 1, 2],   #  for columns: start=0, stop=3, step=1 (i.e. all columns)</span>
+<span class="go">       [3, 4, 5]])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>          <span class="c1"># for rows: start=0, stop=3, step=1 (i.e. all the rows)</span>
+<span class="go">array([[1, 2],       # for columns: start=1, stop=3. step=1 (i.e. column 1 to the end)</span>
+<span class="go">       [4, 5],</span>
+<span class="go">       [7, 8]])</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">,::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>     <span class="c1"># for rows: start=0, stop=3, step=2 (i.e. every second row)</span>
+<span class="go">array([[2, 1, 0],   # for columns: start=0, stop=3, step=-1 (i.e. reverse the columns)</span>
+<span class="go">       [8, 7, 6]])</span>
+</pre></div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../notebooks/week_1_solutions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Introduction I - Programming Basics and Data Types</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../notebooks/week_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Introduction II - Data Types 2 and Numpy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-if-variants">Control flow: If variants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-while-statements">Control flow: while statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-control-break-statements">Additional control: break statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-python-s-foundation-of-scientific-computing">NumPy: Python’s foundation of scientific computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By A. Mathis, L. Stoffl, A. Marin Vargas, A. Chiappa, B. Borzyszkowski, H. Qi, M. Zhou, O. Ulrich, A. Saadat, S. Zhang, C. Li
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>Powered by <a href="https://jupyterbook.org/">Jupyter Book</a>.</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
