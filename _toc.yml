@@ -7,10 +7,13 @@ parts:
   - file: docs/noto_guide
 - numbered: 1  # Only the second part is numbered
   chapters:
-  chapters:
   - file: docs/week_1
     sections:
     - title: week 1 - notebook
       file: notebooks/week_1.ipynb
-    - title: week 1 - notebook with solutions
+    - title: week 1 - with solutions
       file: notebooks/week_1_solutions.ipynb
+  - file: docs/week_2
+    sections:
+    - title: week 2 - notebook
+      file: notebooks/week_2.ipynb
