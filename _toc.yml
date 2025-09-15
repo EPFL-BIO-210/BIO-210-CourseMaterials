@@ -3,7 +3,6 @@ root: README
 title: BIO-210
 
 parts:
-- chapters:
   - file: docs/noto_guide
   - file: docs/installation
 - numbered: 1  # Only the second part is numbered
