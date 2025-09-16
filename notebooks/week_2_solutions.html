@@ -947,34 +947,34 @@ Shape after concatenation along axis 1: (2, 10)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">row</span> <span class="o">+</span> <span class="n">noise</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.08186659  0.74109193  0.65680219 -0.30619884 -0.6734278   1.19796811
-  -0.41357663 -0.08581642  0.54504751 -0.94848207]
- [ 2.08186659  1.74109193  1.65680219  0.69380116  0.3265722   2.19796811
-   0.58642337  0.91418358  1.54504751  0.05151793]
- [ 3.08186659  2.74109193  2.65680219  1.69380116  1.3265722   3.19796811
-   1.58642337  1.91418358  2.54504751  1.05151793]
- [ 4.08186659  3.74109193  3.65680219  2.69380116  2.3265722   4.19796811
-   2.58642337  2.91418358  3.54504751  2.05151793]
- [ 5.08186659  4.74109193  4.65680219  3.69380116  3.3265722   5.19796811
-   3.58642337  3.91418358  4.54504751  3.05151793]
- [ 6.08186659  5.74109193  5.65680219  4.69380116  4.3265722   6.19796811
-   4.58642337  4.91418358  5.54504751  4.05151793]
- [ 7.08186659  6.74109193  6.65680219  5.69380116  5.3265722   7.19796811
-   5.58642337  5.91418358  6.54504751  5.05151793]
- [ 8.08186659  7.74109193  7.65680219  6.69380116  6.3265722   8.19796811
-   6.58642337  6.91418358  7.54504751  6.05151793]
- [ 9.08186659  8.74109193  8.65680219  7.69380116  7.3265722   9.19796811
-   7.58642337  7.91418358  8.54504751  7.05151793]
- [10.08186659  9.74109193  9.65680219  8.69380116  8.3265722  10.19796811
-   8.58642337  8.91418358  9.54504751  8.05151793]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.92889922  1.92889922  2.92889922  3.92889922  4.92889922  5.92889922
+   6.92889922  7.92889922  8.92889922  9.92889922]
+ [-0.20815545  0.79184455  1.79184455  2.79184455  3.79184455  4.79184455
+   5.79184455  6.79184455  7.79184455  8.79184455]
+ [ 0.43803712  1.43803712  2.43803712  3.43803712  4.43803712  5.43803712
+   6.43803712  7.43803712  8.43803712  9.43803712]
+ [ 0.36722201  1.36722201  2.36722201  3.36722201  4.36722201  5.36722201
+   6.36722201  7.36722201  8.36722201  9.36722201]
+ [ 0.79203823  1.79203823  2.79203823  3.79203823  4.79203823  5.79203823
+   6.79203823  7.79203823  8.79203823  9.79203823]
+ [-0.34452817  0.65547183  1.65547183  2.65547183  3.65547183  4.65547183
+   5.65547183  6.65547183  7.65547183  8.65547183]
+ [ 0.54798968  1.54798968  2.54798968  3.54798968  4.54798968  5.54798968
+   6.54798968  7.54798968  8.54798968  9.54798968]
+ [-0.58107121  0.41892879  1.41892879  2.41892879  3.41892879  4.41892879
+   5.41892879  6.41892879  7.41892879  8.41892879]
+ [ 0.72773139  1.72773139  2.72773139  3.72773139  4.72773139  5.72773139
+   6.72773139  7.72773139  8.72773139  9.72773139]
+ [-2.27404509 -1.27404509 -0.27404509  0.72595491  1.72595491  2.72595491
+   3.72595491  4.72595491  5.72595491  6.72595491]]
 </pre></div>
 </div>
 </div>
