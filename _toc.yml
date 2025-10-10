@@ -28,3 +28,4 @@ parts:
     - title: Recommended tutorial on Git
       url: https://www.youtube.com/watch?v=HkdAHXoRtos
   - file: docs/week_4
+  - file: docs/week_5
