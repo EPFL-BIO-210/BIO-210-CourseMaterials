@@ -4,4 +4,4 @@ This week, we will refactor our projects into more modular form using functions.
 
 Please refer to the lecture notes for a deeper dive into functions, `def`, scoping, namespaces, LEGB rule, global as well as Python's argument matching rules. Afterwards, have a look at this week's handout below.
 
-<object data="../week6/week6.pdf" type="application/pdf" width="100%" height="900px"></object>
+<object data="../week5/week5.pdf" type="application/pdf" width="100%" height="900px"></object>
