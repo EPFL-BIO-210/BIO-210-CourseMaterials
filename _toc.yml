@@ -5,7 +5,6 @@ title: BIO-210
 parts:
 - chapters:
   - file: docs/noto_guide
-  - file: docs/installation
   - file: docs/release_notes
 - numbered: 1  # Only the second part is numbered
   chapters:
@@ -19,8 +18,6 @@ parts:
     sections:
     - title: week 2 - notebook
       file: notebooks/week_2.ipynb
-    - title: week 2 - with solutions
-      file: notebooks/week_2_solutions.ipynb
   - file: docs/week_3
     sections:
     - title: Git cheatsheet
@@ -35,4 +32,4 @@ parts:
     - title: BIO-210 survival kit (by Viva Berlenghi)
       file: docs/week_5_git_manual.md
   - file: docs/week_7
-  
+  - file: docs/week_8
