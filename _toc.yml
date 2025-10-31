@@ -35,4 +35,4 @@ parts:
     - title: BIO-210 survival kit (by Viva Berlenghi)
       file: docs/week_5_git_manual.md
   - file: docs/week_7
-  
+  - file: docs/week_8
