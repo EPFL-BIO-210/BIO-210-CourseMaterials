@@ -39,3 +39,5 @@ parts:
   - file: docs/week_9
   - file: docs/week_10
   - file: docs/week_11
+  - file: docs/week_12
+
