@@ -10,25 +10,25 @@ Making releases is common practice for packages: e.g. [numpy v1.21.3](https://gi
 
 ## Release schedule
 
-Every release apart from v8 should be released at *10am on Mondays* (before the lecture) according to the following schedule:
+Every release apart from v8 should be released at *10am on Fridays* (before the lecture) according to the following schedule:
 
 |	          	|	Date	    |	Topic	| Software version | Software releases |  Grading / Feedback |
 | :---        |    :---  |    :--- | :--- | :--- | :--- |
-|	0	|	08/09/2025	|	Python introduction I	|
-|	1	|	15/09/2025	|	Python introduction II	|
-|	2	|	22/09/2025	|	Public holiday	|
-|	3	|	29/09/2025	|	Git	and GitHub (+installation VS Code) |
-|	4	|	06/10/2025	|	Project introduction	| v1 | |
-|	5	|	13/10/2025	|	Functionify	| v2 | v1 |  |
-|	6	|	20/10/2025	|	EPFL fall break |
-|	7	|	27/10/2025	|	Visualization and documentation	| v3 | v2 | code review (API) |
-|	8	|	03/11/2025	|	Unit-tests, functional tests	| v4 | v3 | |
-|	9	|	10/11/2025	|	Code refactoring	| v5 | v4 | graded (tests) |
-|	10	|	17/11/2025	|	Profiling and code optimization	| v6 | v5 | code review  |
-|	11	|	24/11/2025	|	Object oriented programming	| v7 | v6 | graded (speed)|
-|	12	|	01/12/2025	|	Model analysis and project report | v8 | v7 | code review (OO) |
-|	13	|	08/12/2025	|	Work on project (no class) |
-|	14	|	15/12/2025	|	Wrap up	|  | v8 | graded (project) |
+| 1 | 11/09/2026 | Python introduction I | | | |
+| 2 | 18/09/2026 | Python introduction II | | | |
+| 3 | 25/09/2026 | Git and GitHub (+ VS Code install) | | | |
+| 4 | 02/10/2026 | Project introduction | v1 | | |
+| 5 | 09/10/2026 | Functionify | v2 | v1 | |
+| 6 | 16/10/2026 | Quiz (in class) | | | graded (quiz, 15%) |
+| — | 23/10/2026 | EPFL autumn break (no class) | | | |
+| 7 | 30/10/2026 | Visualization and documentation | v3 | v2 | code review (API) |
+| 8 | 06/11/2026 | Unit-tests, functional tests | v4 | v3 | |
+| 9 | 13/11/2026 | Code refactoring / reproducibility | v5 | v4 | graded (tests) |
+| 10 | 20/11/2026 | Profiling and code optimization | v6 | v5 | code review |
+| 11 | 27/11/2026 | Object oriented programming | v7 | v6 | graded (speed) |
+| 12 | 04/12/2026 | Model analysis and project report | v8 | v7 | code review (OO) |
+| 13 | 11/12/2026 | Wrap up, prize ranking | | v8 | graded (project) |
+| 14 | 18/12/2026 | No class | | | |
 
 
 ## Project release rules

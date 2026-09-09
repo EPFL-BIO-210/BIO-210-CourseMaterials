@@ -181,28 +181,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../docs/week_2.html">2. Python Introduction II</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="week_2.html">week 2 - notebook</a></li>
-<li class="toctree-l2"><a class="reference internal" href="week_2_solutions.html">week 2 - with solutions</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../docs/week_3.html">3. Git and Github</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../docs/week_3_git_cheatsheet.html">Git cheatsheet</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=HkdAHXoRtos">Recommended tutorial on Git</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../docs/week_4.html">4. Project introduction</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../docs/week_5.html">5. Functionify</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=oepxj-e78PA">Git in VSCode tutorial (by Jennifer Shan)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs/week_5_git_manual.html">BIO-210 survival kit (by Viva Berlenghi)</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../docs/week_7.html">6. Visualization and documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../docs/week_8.html">7. Testing in Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../docs/week_9.html">8. Reproducible code and addressing code reviews</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../docs/week_10.html">9. Profiling and code optimization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../docs/week_11.html">10. Object Oriented Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../docs/week_12.html">11. Model analysis and summary</a></li>
 </ul>
 
     </div>
@@ -398,10 +376,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-epfl-s-noto-platform">Using EPFL’s Noto Platform</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types-fundamentals">Data types - Fundamentals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-and-ifs">Loops and ifs</a></li>
@@ -434,32 +409,6 @@ document.write(`
 <p>Welcome to the course “<strong>Applied software engineering for life sciences</strong>”! During this semester you will learn how to use the programming language <strong>Python</strong> to develop a medium-sized project. The first 4 exercise sessions, including this one, will focus on teaching you the fundamentals of Python, git and VS code. Then the project phase will start!</p>
 <p>This page (that you see right now) is called a <strong>Notebook</strong>. It is a convenient development tool, as it allows you to run your code in blocks (called <strong>cells</strong>) and immediately visualize the output. Furthermore, the variables defined in a cell are stored in memory and are readily available in all other cells. In the cell below, we are performing the operation 3 + 4. To execute it and visualize the result, just select the cell with your mouse (or moving down with an arrow) and press the <strong>play</strong> button in the command bar at the top of this page. Alternatively, you can use the shortcut [ctrl] + [enter] to run the cell ([shift] + [enter] to run the cell and move to the next one).</p>
 <p>Specifically, this <strong>Notebook</strong> is a <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a> a web application for creating and sharing computational documents.</p>
-<section id="using-epfl-s-noto-platform">
-<h2>Using EPFL’s Noto Platform<a class="headerlink" href="#using-epfl-s-noto-platform" title="Permalink to this heading">#</a></h2>
-<p><strong>What is Noto?</strong></p>
-<p>Noto is EPFL’s centralized JupyterLab platform that allows teachers and students to use Jupyter Notebooks online without having to install anything on their computer.</p>
-<p><strong>How to access Noto:</strong></p>
-<ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://noto.epfl.ch">https://noto.epfl.ch</a></p></li>
-<li><p>Log in with your Gaspar credentials</p></li>
-</ol>
-<p><strong>How to run Jupyter Notebooks with Noto:</strong></p>
-<ol class="arabic simple">
-<li><p>Once logged into Noto, press the blue button in the top left corner to open the launcher</p></li>
-<li><p>Open a terminal by selecting the appropriate icon in the launcher</p></li>
-<li><p>Navigate to the folder where you want to download the course materials</p></li>
-<li><p>Clone the repository: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/EPFL-BIO-210/BIO-210-CourseMaterials.git</span></code></p></li>
-<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> directory and open the Jupyter Notebook of your choice</p></li>
-</ol>
-<p><strong>How to download the latest materials:</strong></p>
-<p>If you’ve already cloned the repository and want to update to the latest version:</p>
-<ol class="arabic simple">
-<li><p>Open a terminal in Noto</p></li>
-<li><p>Navigate to the root folder of “BIO-210-CourseMaterials”</p></li>
-<li><p>Run: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p></li>
-</ol>
-<p><em>Note: If you get an error with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>, rename your current week’s notebook file and try again. This will be explained in detail during our git lessons!</em></p>
-</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="table-of-contents">
 <h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h1>
@@ -685,7 +634,7 @@ To understand what that means, we need to have a look on <strong>generators</str
 </div>
 </div>
 </div>
-<p><strong>Exercise 6</strong>: write some code which, given two strings, prints the larger one if one of them is contained in the other, otherwise it concatenates them and prints the resulting string</p>
+<p><strong>Exercise 6</strong>: write some code which, given two strings, prints the larger one if one of them is contained it the other, otherwise it concatenates them and prints the resulting string</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Insert your code here</span>
@@ -1004,10 +953,7 @@ Python tells you exactly what’s wrong and where - read the error message caref
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-epfl-s-noto-platform">Using EPFL’s Noto Platform</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Introduction I - Programming Basics and Data Types</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types-fundamentals">Data types - Fundamentals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loops-and-ifs">Loops and ifs</a></li>
@@ -1037,7 +983,7 @@ Python tells you exactly what’s wrong and where - read the error message caref
   <div class="footer-item">
     
 <p class="component-author">
-By A. Mathis, L. Stoffl, A. Marin Vargas, A. Chiappa, B. Borzyszkowski, H. Qi, M. Zhou, O. Ulrich, A. Saadat, S. Zhang, C. Li, A. Bonnetto
+By G. La Manno, O. Ulrich, A. Bonnetto, C. Li, M. Tashkovska, S. Geurts, M. Grudzien, L. Polyakova
 </p>
 
   </div>
@@ -1047,7 +993,7 @@ By A. Mathis, L. Stoffl, A. Marin Vargas, A. Chiappa, B. Borzyszkowski, H. Qi, M
 
   <p class="copyright">
     
-      © Copyright 2025.
+      © Copyright 2026.
       <br/>
     
   </p>
