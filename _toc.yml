@@ -33,3 +33,4 @@ parts:
     - title: Git manual
       file: docs/week_5_git_manual
   - file: docs/week_7
+  - file: docs/week_8
