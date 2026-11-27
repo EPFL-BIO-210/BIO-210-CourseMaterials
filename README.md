@@ -27,5 +27,8 @@ Lectures are on Fridays 10-12 (CO3), exercise sessions on Fridays 13-15.
 | 10 | 20/11/2026 | Profiling and code optimization | v6 | v5 | code review |
 | 11 | 27/11/2026 | Object oriented programming | v7 | v6 | graded (speed) |
 | 12 | 04/12/2026 | Model analysis and project report | v8 | v7 | code review (OO) |
-| 13 | 11/12/2026 | Wrap up, prize ranking | | v8 | graded (project) |
+| 13 | 11/12/2026 | Wrap up, prize ranking | | | |
 | 14 | 18/12/2026 | No class | | | |
+| — | 20/12/2026 | Final project submission (10:00) | | v8 | graded (project) |
+
+**Final v8 deadline: Sunday 20 December 2026 at 10:00**, as specified in the final problem set. The wrap-up remains on 11 December; there is no class on 18 December.
